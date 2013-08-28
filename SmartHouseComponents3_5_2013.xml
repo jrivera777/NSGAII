@@ -1,0 +1,1354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentData>
+	<Component>
+        <Name>Site Clearing</Name>
+        <Description />
+        <Category>Site Work</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Site Clearing 1</Name>
+            <Code />
+            <TotalAssemblyCost>3728.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>1728.8639</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Site Clearing 2</Name>
+            <Code />
+            <TotalAssemblyCost>3487.75</TotalAssemblyCost>
+            <TotalAssemblyCO2>2938.3550</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Site Clearing 3</Name>
+            <Code />
+            <TotalAssemblyCost>2888.60</TotalAssemblyCost>
+            <TotalAssemblyCO2>1191.2250</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+    </Component>
+	<Component>
+        <Name>Excavation</Name>
+        <Description />
+        <Category>Site Work</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Excavation 1</Name>
+            <Code />
+            <TotalAssemblyCost>189.18</TotalAssemblyCost>
+            <TotalAssemblyCO2>158.8300</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Excavation 2</Name>
+            <Code />
+            <TotalAssemblyCost>149.89</TotalAssemblyCost>
+            <TotalAssemblyCO2>240.5056</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Excavation 3</Name>
+            <Code />
+            <TotalAssemblyCost>1055.02</TotalAssemblyCost>
+            <TotalAssemblyCO2>0</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Footing Construction</Name>
+        <Description />
+        <Category>Footing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Footing 1</Name>
+            <Code />
+            <TotalAssemblyCost>7301.67</TotalAssemblyCost>
+            <TotalAssemblyCO2>12343.8395</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Footing 2</Name>
+            <Code />
+            <TotalAssemblyCost>7301.67</TotalAssemblyCost>
+            <TotalAssemblyCO2>11524.3983</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Footing 3</Name>
+            <Code />
+            <TotalAssemblyCost>7301.67</TotalAssemblyCost>
+            <TotalAssemblyCO2>10716.3478</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Footing 4</Name>
+            <Code />
+            <TotalAssemblyCost>7023.86</TotalAssemblyCost>
+            <TotalAssemblyCO2>12169.4802</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Footing 5</Name>
+            <Code />
+            <TotalAssemblyCost>7023.86</TotalAssemblyCost>
+            <TotalAssemblyCO2>11350.0390</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Footing 6</Name>
+            <Code />
+            <TotalAssemblyCost>7023.86</TotalAssemblyCost>
+            <TotalAssemblyCO2>10541.9885</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+	<Component>
+        <Name>Stem Wall Construction</Name>
+        <Description />
+        <Category>Stem Walls</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Stem Wall 1</Name>
+            <Code />
+            <TotalAssemblyCost>6566.13</TotalAssemblyCost>
+            <TotalAssemblyCO2>10951.2276</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Stem Wall 2</Name>
+            <Code />
+            <TotalAssemblyCost>6566.13</TotalAssemblyCost>
+            <TotalAssemblyCO2>10228.2895</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Stem Wall 3</Name>
+            <Code />
+            <TotalAssemblyCost>6566.13</TotalAssemblyCost>
+            <TotalAssemblyCO2>9515.4006</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Stem Wall 4</Name>
+            <Code />
+            <TotalAssemblyCost>6144.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>10776.8683</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Stem Wall 5</Name>
+            <Code />
+            <TotalAssemblyCost>6144.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>10053.9302</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Stem Wall 6</Name>
+            <Code />
+            <TotalAssemblyCost>6144.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>9341.0413</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>	
+    <Component>
+        <Name>Subgrade Insulation</Name>
+        <Description />
+        <Category>Insulation</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Subgrade Insulation 1</Name>
+            <Code />
+            <TotalAssemblyCost>337.49</TotalAssemblyCost>
+            <TotalAssemblyCO2>1438.2480</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Subgrade Insulation 2</Name>
+            <Code />
+            <TotalAssemblyCost>480.5</TotalAssemblyCost>
+            <TotalAssemblyCO2>1544.2437</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Subgrade Insulation 3</Name>
+            <Code />
+            <TotalAssemblyCost>960.99</TotalAssemblyCost>
+            <TotalAssemblyCO2>1456.3212</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Subgrade Insulation 4</Name>
+            <Code />
+            <TotalAssemblyCost>228.81</TotalAssemblyCost>
+            <TotalAssemblyCO2>1336.3112</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+	<Component>
+		<Name>Backfill</Name>
+		<Description />
+		<Category>Site Work</Category>
+		<TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Backfill 1</Name>
+            <Code />
+            <TotalAssemblyCost>43.54</TotalAssemblyCost>
+            <TotalAssemblyCO2>158.8300</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+	</Component>
+	<Component>
+        <Name>Slab-on-Grade Construction</Name>
+        <Description />
+        <Category>Slab Construction</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Slab-on-grade 1</Name>
+            <Code />
+            <TotalAssemblyCost>5489.68</TotalAssemblyCost>
+            <TotalAssemblyCO2>10224.7436</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 2</Name>
+            <Code />
+            <TotalAssemblyCost>5489.68</TotalAssemblyCost>
+            <TotalAssemblyCO2>9477.6555</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 3</Name>
+            <Code />
+            <TotalAssemblyCost>5489.68</TotalAssemblyCost>
+            <TotalAssemblyCO2>8740.9522</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Slab-on-grade 4</Name>
+            <Code />
+            <TotalAssemblyCost>5160.20</TotalAssemblyCost>
+            <TotalAssemblyCO2>10050.3843</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 5</Name>
+            <Code />
+            <TotalAssemblyCost>5160.20</TotalAssemblyCost>
+            <TotalAssemblyCO2>9303.2962</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 6</Name>
+            <Code />
+            <TotalAssemblyCost>5160.20</TotalAssemblyCost>
+            <TotalAssemblyCO2>8566.5929</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Slab-on-grade 7</Name>
+            <Code />
+            <TotalAssemblyCost>11830.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>19389.4231</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 8</Name>
+            <Code />
+            <TotalAssemblyCost>11830.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>17889.3873</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 9</Name>
+            <Code />
+            <TotalAssemblyCost>11830.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>16410.2027</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Slab-on-grade 10</Name>
+            <Code />
+            <TotalAssemblyCost>11325.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>19215.0638</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 11</Name>
+            <Code />
+            <TotalAssemblyCost>11325.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>17715.0280</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Slab-on-grade 12</Name>
+            <Code />
+            <TotalAssemblyCost>11325.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>16235.8434</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Exterior Wall Construction</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Wall Construction 1</Name>
+            <Code />
+            <TotalAssemblyCost>27763.65</TotalAssemblyCost>
+            <TotalAssemblyCO2>28465.5980</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 2</Name>
+            <Code />
+            <TotalAssemblyCost>14733.78</TotalAssemblyCost>
+            <TotalAssemblyCO2>21906.3569</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 3</Name>
+            <Code />
+            <TotalAssemblyCost>14733.78</TotalAssemblyCost>
+            <TotalAssemblyCO2>21740.5895</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 4</Name>
+            <Code />
+            <TotalAssemblyCost>15084.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>22374.6041</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 5</Name>
+            <Code />
+            <TotalAssemblyCost>15084.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>22212.5025</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 6</Name>
+            <Code />
+            <TotalAssemblyCost>15034.47</TotalAssemblyCost>
+            <TotalAssemblyCO2>21959.8448</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 7</Name>
+            <Code />
+            <TotalAssemblyCost>15034.47</TotalAssemblyCost>
+            <TotalAssemblyCO2>21797.1915</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 8</Name>
+            <Code />
+            <TotalAssemblyCost>15034.47</TotalAssemblyCost>
+            <TotalAssemblyCO2>22383.6827</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 9</Name>
+            <Code />
+            <TotalAssemblyCost>15034.47</TotalAssemblyCost>
+            <TotalAssemblyCO2>22217.9153</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 10</Name>
+            <Code />
+            <TotalAssemblyCost>15084.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>22292.6382</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 11</Name>
+            <Code />
+            <TotalAssemblyCost>15084.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>22126.8708</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 12</Name>
+            <Code />
+            <TotalAssemblyCost>15084.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>22728.7569</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 13</Name>
+            <Code />
+            <TotalAssemblyCost>15084.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>22545.0837</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 14</Name>
+            <Code />
+            <TotalAssemblyCost>13781.60</TotalAssemblyCost>
+            <TotalAssemblyCO2>17220.0519</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 15</Name>
+            <Code />
+            <TotalAssemblyCost>13781.60</TotalAssemblyCost>
+            <TotalAssemblyCO2>17054.2845</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 16</Name>
+            <Code />
+            <TotalAssemblyCost>14132.40</TotalAssemblyCost>
+            <TotalAssemblyCO2>17713.4018</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 17</Name>
+            <Code />
+            <TotalAssemblyCost>14132.40</TotalAssemblyCost>
+            <TotalAssemblyCO2>17547.6344</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 18</Name>
+            <Code />
+            <TotalAssemblyCost>14082.29</TotalAssemblyCost>
+            <TotalAssemblyCO2>17273.5715</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 19</Name>
+            <Code />
+            <TotalAssemblyCost>14082.29</TotalAssemblyCost>
+            <TotalAssemblyCO2>17107.8041</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 20</Name>
+            <Code />
+            <TotalAssemblyCost>14082.29</TotalAssemblyCost>
+            <TotalAssemblyCO2>17718.8146</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 21</Name>
+            <Code />
+            <TotalAssemblyCost>14082.29</TotalAssemblyCost>
+            <TotalAssemblyCO2>17553.0472</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 22</Name>
+            <Code />
+            <TotalAssemblyCost>14132.40</TotalAssemblyCost>
+            <TotalAssemblyCO2>17647.7887</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 23</Name>
+            <Code />
+            <TotalAssemblyCost>14132.40</TotalAssemblyCost>
+            <TotalAssemblyCO2>17482.0213</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall Construction 24</Name>
+            <Code />
+            <TotalAssemblyCost>14132.40</TotalAssemblyCost>
+            <TotalAssemblyCO2>18083.9074</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 25</Name>
+            <Code />
+            <TotalAssemblyCost>14132.40</TotalAssemblyCost>
+            <TotalAssemblyCO2>17900.2342</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 26</Name>
+            <Code />
+            <TotalAssemblyCost>20045.96</TotalAssemblyCost>
+            <TotalAssemblyCO2>38087.4156</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 27</Name>
+            <Code />
+            <TotalAssemblyCost>17640.44</TotalAssemblyCost>
+            <TotalAssemblyCO2>36240.6278</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 28</Name>
+            <Code />
+            <TotalAssemblyCost>20396.76</TotalAssemblyCost>
+            <TotalAssemblyCO2>38556.2462</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 29</Name>
+            <Code />
+            <TotalAssemblyCost>17991.25</TotalAssemblyCost>
+            <TotalAssemblyCO2>36709.4585</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 30</Name>
+            <Code />
+            <TotalAssemblyCost>20346.65</TotalAssemblyCost>
+            <TotalAssemblyCO2>38140.9352</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 31</Name>
+            <Code />
+            <TotalAssemblyCost>17941.13</TotalAssemblyCost>
+            <TotalAssemblyCO2>36294.1474</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 32</Name>
+            <Code />
+            <TotalAssemblyCost>20346.65</TotalAssemblyCost>
+            <TotalAssemblyCO2>38561.6589</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 33</Name>
+            <Code />
+            <TotalAssemblyCost>17941.13</TotalAssemblyCost>
+            <TotalAssemblyCO2>36714.8712</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 34</Name>
+            <Code />
+            <TotalAssemblyCost>20396.76</TotalAssemblyCost>
+            <TotalAssemblyCO2>38470.6145</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 35</Name>
+            <Code />
+            <TotalAssemblyCost>17991.25</TotalAssemblyCost>
+            <TotalAssemblyCO2>36623.8268</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 36</Name>
+            <Code />
+            <TotalAssemblyCost>20396.76</TotalAssemblyCost>
+            <TotalAssemblyCO2>38906.7332</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 37</Name>
+            <Code />
+            <TotalAssemblyCost>17991.25</TotalAssemblyCost>
+            <TotalAssemblyCO2>37059.9455</TotalAssemblyCO2>
+            <EstimatedDuration>19</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 38</Name>
+            <Code />
+            <TotalAssemblyCost>19093.78</TotalAssemblyCost>
+            <TotalAssemblyCO2>33398.0282</TotalAssemblyCO2>
+            <EstimatedDuration>16</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 39</Name>
+            <Code />
+            <TotalAssemblyCost>16688.26</TotalAssemblyCost>
+            <TotalAssemblyCO2>31551.2404</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 40</Name>
+            <Code />
+            <TotalAssemblyCost>19444.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>33891.3781</TotalAssemblyCO2>
+            <EstimatedDuration>16</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 41</Name>
+            <Code />
+            <TotalAssemblyCost>17039.07</TotalAssemblyCost>
+            <TotalAssemblyCO2>32044.5904</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 42</Name>
+            <Code />
+            <TotalAssemblyCost>19394.47</TotalAssemblyCost>
+            <TotalAssemblyCO2>33451.5478</TotalAssemblyCO2>
+            <EstimatedDuration>16</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 43</Name>
+            <Code />
+            <TotalAssemblyCost>16988.45</TotalAssemblyCost>
+            <TotalAssemblyCO2>31604.7600</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 44</Name>
+            <Code />
+            <TotalAssemblyCost>19394.47</TotalAssemblyCost>
+            <TotalAssemblyCO2>33896.7909</TotalAssemblyCO2>
+            <EstimatedDuration>16</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 45</Name>
+            <Code />
+            <TotalAssemblyCost>16988.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>32050.0031</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 46</Name>
+            <Code />
+            <TotalAssemblyCost>19444.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>33825.7650</TotalAssemblyCO2>
+            <EstimatedDuration>16</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 47</Name>
+            <Code />
+            <TotalAssemblyCost>17039.07</TotalAssemblyCost>
+            <TotalAssemblyCO2>31978.9773</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 48</Name>
+            <Code />
+            <TotalAssemblyCost>19444.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>34261.8837</TotalAssemblyCO2>
+            <EstimatedDuration>16</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Wall Construction 49</Name>
+            <Code />
+            <TotalAssemblyCost>17039.07</TotalAssemblyCost>
+            <TotalAssemblyCO2>32415.0959</TotalAssemblyCO2>
+            <EstimatedDuration>14</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roof Truss Construction</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Roof Truss 1</Name>
+            <Code />
+            <TotalAssemblyCost>10380.07</TotalAssemblyCost>
+            <TotalAssemblyCO2>4352.13</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roof Construction</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Roof Construction 1</Name>
+            <Code />
+            <TotalAssemblyCost>56030.18</TotalAssemblyCost>
+            <TotalAssemblyCO2>57045.118</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Roof Construction 2</Name>
+            <Code />
+            <TotalAssemblyCost>20928.81</TotalAssemblyCost>
+            <TotalAssemblyCO2>33191.588</TotalAssemblyCO2>
+            <EstimatedDuration>23</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Roof Construction 3</Name>
+            <Code />
+            <TotalAssemblyCost>19512.89</TotalAssemblyCost>
+            <TotalAssemblyCO2>37327.0500</TotalAssemblyCO2>
+            <EstimatedDuration>25</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Roof Construction 4</Name>
+            <Code />
+            <TotalAssemblyCost>22041.32</TotalAssemblyCost>
+            <TotalAssemblyCO2>43403.7710</TotalAssemblyCO2>
+            <EstimatedDuration>25</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Roof Construction 5</Name>
+            <Code />
+            <TotalAssemblyCost>30536.87</TotalAssemblyCost>
+            <TotalAssemblyCO2>33483.6850</TotalAssemblyCO2>
+            <EstimatedDuration>25</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Roof Construction 6</Name>
+            <Code />
+            <TotalAssemblyCost>17591.27</TotalAssemblyCost>
+            <TotalAssemblyCO2>27450.262</TotalAssemblyCO2>
+            <EstimatedDuration>21</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Interior Wall Construction</Name>
+        <Description />
+        <Category>Interior Partition</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Interior Wall Construction 1</Name>
+            <Code />
+            <TotalAssemblyCost>6729.37</TotalAssemblyCost>
+            <TotalAssemblyCO2>8979.4900</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 2</Name>
+            <Code />
+            <TotalAssemblyCost>6729.37</TotalAssemblyCost>
+            <TotalAssemblyCO2>8894.5300</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 3</Name>
+            <Code />
+            <TotalAssemblyCost>7088.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>9487.68</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 4</Name>
+            <Code />
+            <TotalAssemblyCost>7088.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>9402.72</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 5</Name>
+            <Code />
+            <TotalAssemblyCost>7037.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>9034.35</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 6</Name>
+            <Code />
+            <TotalAssemblyCost>7037.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>8949.39</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 7</Name>
+            <Code />
+            <TotalAssemblyCost>7037.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>9493.23</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 8</Name>
+            <Code />
+            <TotalAssemblyCost>7037.58</TotalAssemblyCost>
+            <TotalAssemblyCO2>9408.27</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 9</Name>
+            <Code />
+            <TotalAssemblyCost>7088.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>9422.44</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 10</Name>
+            <Code />
+            <TotalAssemblyCost>7088.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>9337.48</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 11</Name>
+            <Code />
+            <TotalAssemblyCost>7088.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>9866.30</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 12</Name>
+            <Code />
+            <TotalAssemblyCost>7088.95</TotalAssemblyCost>
+            <TotalAssemblyCO2>9784.54</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 13</Name>
+            <Code />
+            <TotalAssemblyCost>6241.36</TotalAssemblyCost>
+            <TotalAssemblyCO2>8521.78</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 14</Name>
+            <Code />
+            <TotalAssemblyCost>6241.36</TotalAssemblyCost>
+            <TotalAssemblyCO2>8436.82</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 15</Name>
+            <Code />
+            <TotalAssemblyCost>6600.94</TotalAssemblyCost>
+            <TotalAssemblyCO2>9029.97</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 16</Name>
+            <Code />
+            <TotalAssemblyCost>6600.94</TotalAssemblyCost>
+            <TotalAssemblyCO2>18945.01</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 17</Name>
+            <Code />
+            <TotalAssemblyCost>6549.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>8576.64</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 18</Name>
+            <Code />
+            <TotalAssemblyCost>6549.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>8491.68</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 19</Name>
+            <Code />
+            <TotalAssemblyCost>6549.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>9035.52</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 20</Name>
+            <Code />
+            <TotalAssemblyCost>6549.57</TotalAssemblyCost>
+            <TotalAssemblyCO2>8950.56</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 21</Name>
+            <Code />
+            <TotalAssemblyCost>6600.94</TotalAssemblyCost>
+            <TotalAssemblyCO2>8964.72</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 22</Name>
+            <Code />
+            <TotalAssemblyCost>6600.94</TotalAssemblyCost>
+            <TotalAssemblyCO2>8879.77</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 23</Name>
+            <Code />
+            <TotalAssemblyCost>6600.94</TotalAssemblyCost>
+            <TotalAssemblyCO2>9411.78</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 24</Name>
+            <Code />
+            <TotalAssemblyCost>6600.94</TotalAssemblyCost>
+            <TotalAssemblyCO2>9326.82</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		 <Alternative>
+            <Name>Interior Wall Construction 25</Name>
+            <Code />
+            <TotalAssemblyCost>6960.53</TotalAssemblyCost>
+            <TotalAssemblyCO2>17287.97</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 26</Name>
+            <Code />
+            <TotalAssemblyCost>6267.04</TotalAssemblyCost>
+            <TotalAssemblyCO2>16633.68</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 27</Name>
+            <Code />
+            <TotalAssemblyCost>7320.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>17796.16</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 28</Name>
+            <Code />
+            <TotalAssemblyCost>6626.63</TotalAssemblyCost>
+            <TotalAssemblyCO2>17141.87</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 29</Name>
+            <Code />
+            <TotalAssemblyCost>7268.74</TotalAssemblyCost>
+            <TotalAssemblyCO2>17342.83</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 30</Name>
+            <Code />
+            <TotalAssemblyCost>6575.26</TotalAssemblyCost>
+            <TotalAssemblyCO2>16688.54</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 31</Name>
+            <Code />
+            <TotalAssemblyCost>7268.74</TotalAssemblyCost>
+            <TotalAssemblyCO2>17801.71</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 32</Name>
+            <Code />
+            <TotalAssemblyCost>6575.26</TotalAssemblyCost>
+            <TotalAssemblyCO2>17147.42</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 33</Name>
+            <Code />
+            <TotalAssemblyCost>7320.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>17730.92</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 34</Name>
+            <Code />
+            <TotalAssemblyCost>6626.63</TotalAssemblyCost>
+            <TotalAssemblyCO2>17076.63</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 35</Name>
+            <Code />
+            <TotalAssemblyCost>7320.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>18177.98</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 36</Name>
+            <Code />
+            <TotalAssemblyCost>6626.63</TotalAssemblyCost>
+            <TotalAssemblyCO2>17523.68</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 37</Name>
+            <Code />
+            <TotalAssemblyCost>6472.52</TotalAssemblyCost>
+            <TotalAssemblyCO2>16830.26</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 38</Name>
+            <Code />
+            <TotalAssemblyCost>5779.04</TotalAssemblyCost>
+            <TotalAssemblyCO2>16175.94</TotalAssemblyCO2>
+            <EstimatedDuration>7</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 39</Name>
+            <Code />
+            <TotalAssemblyCost>6832.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>17338.45</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 40</Name>
+            <Code />
+            <TotalAssemblyCost>6138.62</TotalAssemblyCost>
+            <TotalAssemblyCO2>16684.16</TotalAssemblyCO2>
+            <EstimatedDuration>7</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 41</Name>
+            <Code />
+            <TotalAssemblyCost>6780.73</TotalAssemblyCost>
+            <TotalAssemblyCO2>16885.12</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 42</Name>
+            <Code />
+            <TotalAssemblyCost>6087.25</TotalAssemblyCost>
+            <TotalAssemblyCO2>16230.83</TotalAssemblyCO2>
+            <EstimatedDuration>7</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 43</Name>
+            <Code />
+            <TotalAssemblyCost>6780.73</TotalAssemblyCost>
+            <TotalAssemblyCO2>17344.00</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 44</Name>
+            <Code />
+            <TotalAssemblyCost>6087.25</TotalAssemblyCost>
+            <TotalAssemblyCO2>16689.71</TotalAssemblyCO2>
+            <EstimatedDuration>7</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 45</Name>
+            <Code />
+            <TotalAssemblyCost>6832.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>17273.21</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 46</Name>
+            <Code />
+            <TotalAssemblyCost>6138.62</TotalAssemblyCost>
+            <TotalAssemblyCO2>16618.91</TotalAssemblyCO2>
+            <EstimatedDuration>7</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 47</Name>
+            <Code />
+            <TotalAssemblyCost>6832.10</TotalAssemblyCost>
+            <TotalAssemblyCO2>17720.27</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Wall Construction 48</Name>
+            <Code />
+            <TotalAssemblyCost>6138.62</TotalAssemblyCost>
+            <TotalAssemblyCO2>17065.97</TotalAssemblyCO2>
+            <EstimatedDuration>7</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 49</Name>
+            <Code />
+            <TotalAssemblyCost>5213.97</TotalAssemblyCost>
+            <TotalAssemblyCO2>8420.48</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 50</Name>
+            <Code />
+            <TotalAssemblyCost>5213.97</TotalAssemblyCost>
+            <TotalAssemblyCO2>8335.52</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 51</Name>
+            <Code />
+            <TotalAssemblyCost>5573.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>8928.67</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 52</Name>
+            <Code />
+            <TotalAssemblyCost>5573.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>8843.71</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+		</Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 53</Name>
+            <Code />
+            <TotalAssemblyCost>5522.19</TotalAssemblyCost>
+            <TotalAssemblyCO2>8475.34</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 54</Name>
+            <Code />
+            <TotalAssemblyCost>5522.19</TotalAssemblyCost>
+            <TotalAssemblyCO2>8390.38</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 55</Name>
+            <Code />
+            <TotalAssemblyCost>5522.19</TotalAssemblyCost>
+            <TotalAssemblyCO2>8934.22</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 56</Name>
+            <Code />
+            <TotalAssemblyCost>5522.19</TotalAssemblyCost>
+            <TotalAssemblyCO2>8849.26</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 57</Name>
+            <Code />
+            <TotalAssemblyCost>5573.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>8863.43</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 58</Name>
+            <Code />
+            <TotalAssemblyCost>5573.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>8778.47</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 59</Name>
+            <Code />
+            <TotalAssemblyCost>5573.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>9310.49</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 60</Name>
+            <Code />
+            <TotalAssemblyCost>5573.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>9225.53</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 61</Name>
+            <Code />
+            <TotalAssemblyCost>5445.14</TotalAssemblyCost>
+            <TotalAssemblyCO2>16728.96</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 62</Name>
+            <Code />
+            <TotalAssemblyCost>4751.65</TotalAssemblyCost>
+            <TotalAssemblyCO2>16074.67</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 63</Name>
+            <Code />
+            <TotalAssemblyCost>5804.72</TotalAssemblyCost>
+            <TotalAssemblyCO2>17234.37</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 64</Name>
+            <Code />
+            <TotalAssemblyCost>5111.24</TotalAssemblyCost>
+            <TotalAssemblyCO2>16582.86</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 65</Name>
+            <Code />
+            <TotalAssemblyCost>5753.35</TotalAssemblyCost>
+            <TotalAssemblyCO2>16783.83</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 66</Name>
+            <Code />
+            <TotalAssemblyCost>5059.87</TotalAssemblyCost>
+            <TotalAssemblyCO2>16129.53</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 67</Name>
+            <Code />
+            <TotalAssemblyCost>5753.35</TotalAssemblyCost>
+            <TotalAssemblyCO2>17242.71</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 68</Name>
+            <Code />
+            <TotalAssemblyCost>5059.87</TotalAssemblyCost>
+            <TotalAssemblyCO2>16588.41</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 69</Name>
+            <Code />
+            <TotalAssemblyCost>5804.72</TotalAssemblyCost>
+            <TotalAssemblyCO2>17171.91</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 70</Name>
+            <Code />
+            <TotalAssemblyCost>5111.24</TotalAssemblyCost>
+            <TotalAssemblyCO2>16517.62</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 71</Name>
+            <Code />
+            <TotalAssemblyCost>5804.72</TotalAssemblyCost>
+            <TotalAssemblyCO2>17618.97</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Interior Wall Construction 72</Name>
+            <Code />
+            <TotalAssemblyCost>5111.24</TotalAssemblyCost>
+            <TotalAssemblyCO2>16964.68</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roofing</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Roof 1</Name>
+            <Code />
+            <TotalAssemblyCost>58938.05</TotalAssemblyCost>
+            <TotalAssemblyCO2>22695.6600</TotalAssemblyCO2>
+            <EstimatedDuration>22</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Roof 2</Name>
+            <Code />
+            <TotalAssemblyCost>33326.53</TotalAssemblyCost>
+            <TotalAssemblyCO2>7104.4700</TotalAssemblyCO2>
+            <EstimatedDuration>24</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Roof 3</Name>
+            <Code />
+            <TotalAssemblyCost>6150.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>7653.1400</TotalAssemblyCO2>
+            <EstimatedDuration>13</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Roof 4</Name>
+            <Code />
+            <TotalAssemblyCost>6150.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>6288.4100</TotalAssemblyCO2>
+            <EstimatedDuration>13</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Roof 5</Name>
+            <Code />
+            <TotalAssemblyCost>6150.11</TotalAssemblyCost>
+            <TotalAssemblyCO2>5453.2100</TotalAssemblyCO2>
+            <EstimatedDuration>13</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Roof 6</Name>
+            <Code />
+            <TotalAssemblyCost>16421.77</TotalAssemblyCost>
+            <TotalAssemblyCO2>26730.3100</TotalAssemblyCO2>
+            <EstimatedDuration>6</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Flooring</Name>
+        <Description />
+        <Category>Floor</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Flooring 1</Name>
+            <Code />
+            <TotalAssemblyCost>19905.75</TotalAssemblyCost>
+            <TotalAssemblyCO2>53.7200</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Flooring 2</Name>
+            <Code />
+            <TotalAssemblyCost>29783.12</TotalAssemblyCost>
+            <TotalAssemblyCO2>53.7200</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+    </Component>
+	    <Component>
+        <Name>Exterior Siding</Name>
+        <Description />
+        <Category>Exterior Walls</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Siding 1</Name>
+            <Code />
+            <TotalAssemblyCost>73752.01</TotalAssemblyCost>
+            <TotalAssemblyCO2>25301.4000</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Siding 2</Name>
+            <Code />
+            <TotalAssemblyCost>86706.71</TotalAssemblyCost>
+            <TotalAssemblyCO2>23371.1900</TotalAssemblyCO2>
+            <EstimatedDuration>12</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Siding 3</Name>
+            <Code />
+            <TotalAssemblyCost>24386.30</TotalAssemblyCost>
+            <TotalAssemblyCO2>27208.23</TotalAssemblyCO2>
+            <EstimatedDuration>18</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Siding 4</Name>
+            <Code />
+            <TotalAssemblyCost>8953.44</TotalAssemblyCost>
+            <TotalAssemblyCO2>14842.2100</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Siding 5</Name>
+            <Code />
+            <TotalAssemblyCost>16621.02</TotalAssemblyCost>
+            <TotalAssemblyCO2>27891.3800</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Siding 6</Name>
+            <Code />
+            <TotalAssemblyCost>12045.51</TotalAssemblyCost>
+            <TotalAssemblyCO2>29309.07</TotalAssemblyCO2>
+            <EstimatedDuration>10</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Siding 7</Name>
+            <Code />
+            <TotalAssemblyCost>18613.38</TotalAssemblyCost>
+            <TotalAssemblyCO2>17819.8600</TotalAssemblyCO2>
+            <EstimatedDuration>8</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Exterior Siding 8</Name>
+            <Code />
+            <TotalAssemblyCost>14993.32</TotalAssemblyCost>
+            <TotalAssemblyCO2>15966.5500</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+    </Component>
+</ComponentData>

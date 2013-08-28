@@ -1,0 +1,8 @@
+Site_Work, <START>, Excavation_Fill
+Excavation_Fill, Site_Work, Footing
+Excavation_Fill, Site_Work, Stem_Wall
+Footing, Excavation_Fill, Slab
+Stem_Wall, Excavation_Fill, Slab
+Slab, Footing, Exterior_Walls
+Slab, Stem_Wall, Exterior_Walls
+Exterior_Walls, Slab, <END>

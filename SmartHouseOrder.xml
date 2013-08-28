@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentOrder>
+	<Component>
+		<Category>Site Work</Category>
+		<Name>Site Clearing</Name>
+		<PredecessorName>START</PredecessorName>
+		<SuccessorName>Excavation</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Site Work</Category>
+		<Name>Excavation</Name>
+		<PredecessorName>Site Clearing</PredecessorName>
+		<SuccessorName>Footing Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Footing</Category>
+		<Name>Footing Construction</Name>
+		<PredecessorName>Excavation</PredecessorName>
+		<SuccessorName>Stem Wall Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Stem Walls</Category>
+		<Name>Stem Wall Construction</Name>
+		<PredecessorName>Footing Construction</PredecessorName>
+		<SuccessorName>Subgrade Insulation</SuccessorName>
+	</Component>	
+	<Component>
+		<Category>Insulation</Category>
+		<Name>Subgrade Insulation</Name>
+		<PredecessorName>Stem Wall Construction</PredecessorName>
+		<SuccessorName>Slab-on-Grade Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Site Work</Category>
+		<Name>Backfill</Name>
+		<PredecessorName>Subgrade Insulation</PredecessorName>
+		<SuccessorName>Slab-on-Grade Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Slab Construction</Category>
+		<Name>Slab-on-Grade Construction</Name>
+		<PredecessorName>Backfill</PredecessorName>
+		<SuccessorName>Exterior Wall Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Exterior Wall</Category>
+		<Name>Exterior Wall Construction</Name>
+		<PredecessorName>Slab-on-Grade Construction</PredecessorName>
+		<SuccessorName>Roof Truss Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Roofing</Category>
+		<Name>Roof Truss Construction</Name>
+		<PredecessorName>Exterior Wall Construction</PredecessorName>
+		<SuccessorName>Roof Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Roofing</Category>
+		<Name>Roof Construction</Name>
+		<PredecessorName>Roof Truss Construction</PredecessorName>
+		<SuccessorName>Roofing</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Roofing</Category>
+		<Name>Roof Construction</Name>
+		<PredecessorName>Roof Truss Construction</PredecessorName>
+		<SuccessorName>Interior Wall Construction</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Interior Partition</Category>
+		<Name>Interior Wall Construction</Name>
+		<PredecessorName>Roof Construction</PredecessorName>
+		<SuccessorName>Flooring</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Roofing</Category>
+		<Name>Roofing</Name>
+		<PredecessorName>Roof Construction</PredecessorName>
+		<SuccessorName>Exterior Siding</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Floor</Category>
+		<Name>Flooring</Name>
+		<PredecessorName>Interior Wall Construction</PredecessorName>
+		<SuccessorName>END</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Exterior Wall</Category>
+		<Name>Exterior Siding</Name>
+		<PredecessorName>Roofing</PredecessorName>
+		<SuccessorName>END</SuccessorName>
+	</Component>
+</ComponentOrder>

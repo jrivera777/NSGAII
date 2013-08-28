@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentData>
+    <Component>
+        <Name>Footing Construction</Name>
+        <Description />
+        <Category>Footing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Footing 2</Name>
+            <Code />
+            <TotalAssemblyCost>11010.45</TotalAssemblyCost>
+            <TotalAssemblyCO2>10764.6348</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Stem Wall Construction</Name>
+        <Description />
+        <Category>Stem Walls</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Stem Wall 3</Name>
+            <Code />
+            <TotalAssemblyCost>9713.78</TotalAssemblyCost>
+            <TotalAssemblyCO2>8616.6189</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Subgrade Insulation</Name>
+        <Description />
+        <Category>Insulation</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Subgrade Insulation 1</Name>
+            <Code />
+            <TotalAssemblyCost>337.49</TotalAssemblyCost>
+            <TotalAssemblyCO2>112.4346</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Slab-on-Grade Construction</Name>
+        <Description />
+        <Category>Slab Construction</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Slab-on-grade 2</Name>
+            <Code />
+            <TotalAssemblyCost>7758.8</TotalAssemblyCost>
+            <TotalAssemblyCO2>8696.2009</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+	<Component>
+        <Name>Roof Truss Construction</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Roof Truss Construction 1</Name>
+            <Code />
+            <TotalAssemblyCost>0</TotalAssemblyCost>
+            <TotalAssemblyCO2>0</TotalAssemblyCO2>
+            <EstimatedDuration>0</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Exterior Wall Construction</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Wall Construction 2</Name>
+            <Code />
+            <TotalAssemblyCost>400.88</TotalAssemblyCost>
+            <TotalAssemblyCO2>6.1134</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Interior Wall Framing</Name>
+        <Description />
+        <Category>Interior Partition</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Interior Framing 1</Name>
+            <Code />
+            <TotalAssemblyCost>205.44</TotalAssemblyCost>
+            <TotalAssemblyCO2>6.0251</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Interior Sheathing</Name>
+        <Description />
+        <Category>Interior Partitions</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Interior Sheathing 2</Name>
+            <Code />
+            <TotalAssemblyCost>1566.76</TotalAssemblyCost>
+            <TotalAssemblyCO2>863.0177</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Exterior Wall Insulation</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Insulation 1</Name>
+            <Code />
+            <TotalAssemblyCost>5913.56</TotalAssemblyCost>
+            <TotalAssemblyCO2>1949.8478</TotalAssemblyCO2>
+            <EstimatedDuration>13</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Exterior Wall Sheathing</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Sheathing 2</Name>
+            <Code />
+            <TotalAssemblyCost>3057.01</TotalAssemblyCost>
+            <TotalAssemblyCO2>1678.5044</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roof Insulation</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Roof Insulation 1</Name>
+            <Code />
+            <TotalAssemblyCost>3797.78</TotalAssemblyCost>
+            <TotalAssemblyCO2>1255.1357</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roofing</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Roof 3</Name>
+            <Code />
+            <TotalAssemblyCost>6150</TotalAssemblyCost>
+            <TotalAssemblyCO2>8265.817</TotalAssemblyCO2>
+            <EstimatedDuration>13</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Flooring</Name>
+        <Description />
+        <Category>Floor</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Flooring 2</Name>
+            <Code />
+            <TotalAssemblyCost>29783.12</TotalAssemblyCost>
+            <TotalAssemblyCO2>53.175</TotalAssemblyCO2>
+            <EstimatedDuration>9</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Exterior Siding</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Siding 2</Name>
+            <Code />
+            <TotalAssemblyCost>8953.44</TotalAssemblyCost>
+            <TotalAssemblyCO2>3056.9397</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+    </Component>
+</ComponentData>

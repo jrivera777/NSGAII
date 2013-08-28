@@ -1,0 +1,13 @@
+Site_Work, ST1, 4, 5039.71, 1728.86
+Site_Work, ST2, 4, 4924.93, 2938.36
+Excavation_Fill, EF1, 2, 360.71, 317.66
+Excavation_Fill, EF2, 2, 297.05, 399.34
+Footing, F1, 6, 84232.67, 9541.15
+Footing, F2, 5, 90392.28, 9715.51
+Stem_Wall, STM1, 13, 76650.79, 9647.65
+Stem_Wall, STM2, 8, 86174.94, 9822.01
+Slab, S1, 11, 14636.05, 15790.29
+Slab, S2, 7, 16758.59, 15964.65
+Exterior_Walls, E1, 6, 50, 75
+Exterior_Walls, E2, 14, 25959.52, 9152.52
+Exterior_Walls, E3, 5, 127542.42, 35518.33
