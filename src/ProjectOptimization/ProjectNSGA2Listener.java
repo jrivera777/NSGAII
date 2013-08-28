@@ -1,19 +1,27 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ProjectOptimization;
 
 import NSGAII.Individual;
-import NSGAII.NSGA2Listener;
 import NSGAII.NSGA2Event;
+import NSGAII.NSGA2Listener;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
 
 /**
  *
- * @author Joseph Rivera
+ * @author fdot
  */
-public class ScheduleNSGA2Listener implements NSGA2Listener
+public class ProjectNSGA2Listener implements NSGA2Listener
 {
-
-    /**
+    
+    private final int NUM_GEN = 25;
+     /**
      * Performs the specified NSGA-II event.
      * <p>
      * Every 100 generations, the best individuals found so far are printed.
@@ -22,66 +30,55 @@ public class ScheduleNSGA2Listener implements NSGA2Listener
      */
     public void performNSGA2Event(NSGA2Event nsga2event)
     {
-        if (nsga2event.getNumberGeneration() % 100 == 0)
+        if (nsga2event.getNumberGeneration() % NUM_GEN == 0)
         {
             System.out.println();
             System.out.println("Generation: " + nsga2event.getNumberGeneration());
 
             LinkedList<Individual> bestIndividuals = nsga2event.getBestIndividuals();
 
-            LinkedList<IndividualSchedule> bestSchedules = new LinkedList<IndividualSchedule>();
+            LinkedList<IndividualProject> bestProjects = new LinkedList<IndividualProject>();
             for (Individual individual : bestIndividuals)
             {
-                bestSchedules.add((IndividualSchedule) individual);
+                bestProjects.add((IndividualProject) individual);
             }
 
-            printBestSchedules(bestSchedules);
+            printBestProjects(bestProjects);
         }
     }
 
     /**
      * Prints the specified individuals.
-     * 
-     * @param bestSchedules individuals
      */
-    private static void printBestSchedules(LinkedList<IndividualSchedule> bestSchedules)
+    private static void printBestProjects(LinkedList<IndividualProject> bestProjects)
     {
-        if (bestSchedules == null)
+        NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        NumberFormat precision = new DecimalFormat("#.00");
+        if (bestProjects == null)
         {
-            throw new IllegalArgumentException("'bestSchedules' must not be null.");
+            throw new IllegalArgumentException("'bestProjects' must not be null.");
         }
 
-        // sort best schedules
-        IndividualSchedule[] array =
-                bestSchedules.toArray(new IndividualSchedule[bestSchedules.size()]);
+        IndividualProject[] array =
+                bestProjects.toArray(new IndividualProject[bestProjects.size()]);
         Arrays.sort(array, new IndividualScheduleComparator());
 
         System.out.println();
-        System.out.println("Number of offered solutions: " + bestSchedules.size());
+        System.out.println("Number of offered solutions: " + bestProjects.size());
 
         for (int i = 0; i < array.length; i++)
         {
-            System.out.print(" Duration: " + array[i].getFitnessValue(0));
-            System.out.print(" / Cost: " + array[i].getFitnessValue(1));
-            System.out.println(" / Environmental Impact: " + array[i].getFitnessValue(2));
+            System.out.print(" Cost: " + fmt.format(array[i].getFitnessValue(0)));
+            System.out.print(" / Environmental Impact: " + precision.format(array[i].getFitnessValue(1)));
+            System.out.println(" / Estimated Duration: " + array[i].getFitnessValue(2));
         }
         
     }
 
-    private static class IndividualScheduleComparator implements Comparator<IndividualSchedule>
+    private static class IndividualScheduleComparator implements Comparator<IndividualProject>
     {
 
-        /**
-         * Compares the two specified Schedule individuals. First criterion is a 
-         * low duration, second one is a low Total Cost and the third one is a low
-         * Environmental Impact value.
-         * 
-         * @param individual1 first individual
-         * @param individual2 second individual
-         * @return -1, 0 or 1 as the first individual is less than, equal to, or greater than the
-         *         second one
-         */
-        public int compare(IndividualSchedule individual1, IndividualSchedule individual2)
+        public int compare(IndividualProject individual1, IndividualProject individual2)
         {
             if (individual1 == null)
             {
@@ -112,16 +109,15 @@ public class ScheduleNSGA2Listener implements NSGA2Listener
                 return 1;
             }
 
-            if (individual1.getFitnessValue(2) < individual2.getFitnessValue(2))
+            if (individual1.getFitnessValue(2) < individual2.getFitnessValue(1))
             {
                 return -1;
             }
 
-            if (individual1.getFitnessValue(2) > individual2.getFitnessValue(2))
+            if (individual1.getFitnessValue(2) > individual2.getFitnessValue(1))
             {
                 return 1;
             }
-
             return 0;
         }
     }

@@ -1,4 +1,4 @@
-package Testing;
+package ProjectOptimization;
 
 import NSGAII.FitnessFunction;
 import NSGAII.Individual;
