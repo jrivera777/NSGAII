@@ -4,6 +4,8 @@
  */
 package ProjectOptimization;
 
+import IDF.POption;
+import IDF.ParametricOptionReader;
 import NSGAII.*;
 import java.io.File;
 import java.text.DateFormat;
@@ -46,7 +48,8 @@ public class ProjectTest
     {
         //create ActivityList of All Alternates
         // create NSGA-II instance
-        String compFile, orderFile = "";
+        String compFile, orderFile, poFile;
+        compFile = orderFile = poFile = "";
 
         //===============DEBUGGING MODES===========//
         DebugMode dbgMode = DebugMode.SIMPLE;
@@ -57,8 +60,8 @@ public class ProjectTest
         {
             case SIMPLE:
             {
-                compFile = "C:\\Documents and Settings\\fdot\\Desktop\\testing.xml";
-                orderFile = "C:\\Documents and Settings\\fdot\\Desktop\\testingorder.xml";
+                compFile = "testing.xml";
+                orderFile = "testingorder.xml";
                 break;
             }
             case FULL:
@@ -88,6 +91,12 @@ public class ProjectTest
                         System.out.println("Population size must be divisible by 4.");
                         System.exit(-1);
                     }
+                }
+                if(args.length < 5)
+                    System.out.println("No ParametricOptions file found. Energy simulation data will not be considered!");
+                else
+                {
+                    
                 }
                 
                 break;
@@ -119,9 +128,11 @@ public class ProjectTest
         LinkedList<Individual> startPopulation = new LinkedList<Individual>();
         //create the set of all options for each assembly
         ArrayList<Precedence> order = ComponentOrderReader.ReadXml(orderFile);
+        Map<String, List<POption>> parametrics = ParametricOptionReader.readParametricOptions(poFile);
         for (int i = 0; i < POPULATION_SIZE; i++)
         {
             IndividualProject indv = new IndividualProject(nsga2, assemSet, order);
+            indv.setParametrics(parametrics);
             startPopulation.add(indv);
         }
 

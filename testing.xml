@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentData>
+    <Component>
+        <Name>Exterior Walls</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>546.981044107746</TotalComponentArea>
+        <TotalComponentVolume>357.399359375029</TotalComponentVolume>
+        <Alternative>
+            <Name>Exterior Wall 1</Name>
+            <Code>B2010</Code>
+            <TotalAssemblyCost>5014.44872185776</TotalAssemblyCost>
+            <TotalAssemblyCO2>3305.04936215511</TotalAssemblyCO2>
+            <EstimatedDuration>5</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall 2</Name>
+            <Code>B2010</Code>
+            <TotalAssemblyCost>5610.6580599352</TotalAssemblyCost>
+            <TotalAssemblyCO2>3038.6594491581</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Exterior Wall 4</Name>
+            <Code>B2010</Code>
+            <TotalAssemblyCost>5610.6580599352</TotalAssemblyCost>
+            <TotalAssemblyCO2>2693.4066613894</TotalAssemblyCO2>
+            <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+                <Name>Exterior Wall 7</Name>
+                <Code>B2010</Code>
+                <TotalAssemblyCost>6354.55227992174</TotalAssemblyCost>
+                <TotalAssemblyCO2>3325.88306192334</TotalAssemblyCO2>
+                <EstimatedDuration>4</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Foundation</Name>
+        <Description />
+        <Category>Foundation</Category>
+        <TotalComponentArea>60.6666666666667</TotalComponentArea>
+        <TotalComponentVolume>60.6666666666667</TotalComponentVolume>
+        <Alternative>
+            <Name>Foundation 1</Name>
+            <Code>A1030</Code>
+            <TotalAssemblyCost>911.123456790123</TotalAssemblyCost>
+            <TotalAssemblyCO2>976.246021961468</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Foundation 2</Name>
+            <Code>A1030</Code>
+            <TotalAssemblyCost>911.123456790123</TotalAssemblyCost>
+            <TotalAssemblyCO2>939.054079858313</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Foundation 3</Name>
+            <Code>A1030</Code>
+            <TotalAssemblyCost>911.123456790123</TotalAssemblyCost>
+            <TotalAssemblyCO2>902.379090445186</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Foundation 4</Name>
+            <Code>A1030</Code>
+            <TotalAssemblyCost>861.691358024691</TotalAssemblyCost>
+            <TotalAssemblyCO2>963.954784841096</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Foundation 5</Name>
+            <Code>A1030</Code>
+            <TotalAssemblyCost>861.691358024691</TotalAssemblyCost>
+            <TotalAssemblyCO2>926.616991984596</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roofing</Name><Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>3626.01695796325</TotalComponentArea>
+        <TotalComponentVolume>3626.01695796325</TotalComponentVolume>
+        <Alternative>
+            <Name>Roofing 1</Name>
+            <Code>B1020</Code>
+            <TotalAssemblyCost>27459.3405363833</TotalAssemblyCost>
+            <TotalAssemblyCO2>55413.6570110362</TotalAssemblyCO2>
+            <EstimatedDuration>27</EstimatedDuration>
+        </Alternative>
+        <Alternative><Name>Roofing 2</Name><Code>B1020</Code><TotalAssemblyCost>31277.1737914228</TotalAssemblyCost><TotalAssemblyCO2>26655.911440197</TotalAssemblyCO2><EstimatedDuration>27</EstimatedDuration></Alternative><Alternative><Name>Roofing 3</Name><Code>B1020</Code><TotalAssemblyCost>31277.1737914228</TotalAssemblyCost><TotalAssemblyCO2>25677.5109937697</TotalAssemblyCO2><EstimatedDuration>27</EstimatedDuration></Alternative>
+    </Component>
+    <Component>
+        <Name>Interior Partitions</Name>
+        <Description />
+        <Category>Interior Partition</Category>
+        <TotalComponentArea>533.333333333241</TotalComponentArea>
+        <TotalComponentVolume>138.888888888865</TotalComponentVolume>
+        <Alternative>
+            <Name>Interior Partition 1</Name>
+            <Code>C1010</Code>
+            <TotalAssemblyCost>1134.66666666647</TotalAssemblyCost>
+            <TotalAssemblyCO2>366.488051391271</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Partition 2</Name>
+            <Code>C1010</Code>
+            <TotalAssemblyCost>1143.46666666647</TotalAssemblyCost>
+            <TotalAssemblyCO2>410.777475085823</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Partition 3</Name>
+            <Code>C1010</Code>
+            <TotalAssemblyCost>1333.3333333331</TotalAssemblyCost>
+            <TotalAssemblyCO2>510.028780900706</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Partition 6</Name>
+            <Code>C1010</Code>
+            <TotalAssemblyCost>1143.46666666647</TotalAssemblyCost>
+            <TotalAssemblyCO2>394.265055533273</TotalAssemblyCO2>
+            <EstimatedDuration>3</EstimatedDuration>
+        </Alternative>
+        <Alternative>
+            <Name>Interior Partition 8</Name>
+            <Code>C1010</Code>
+            <TotalAssemblyCost>1429.33333333308</TotalAssemblyCost>
+            <TotalAssemblyCO2>556.323443165274</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+</ComponentData>

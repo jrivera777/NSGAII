@@ -35,7 +35,7 @@ public class ParametricOptionReader
                 for (int i = 0; i < list.getLength(); i++)
                 {
                     Node pOpt = list.item(i);
-                    String paramName = pOpt.getAttributes().item(0).getNodeValue().trim();
+                    String paramName = pOpt.getAttributes().getNamedItem("comp").getNodeValue().trim(); //component name
 
                     if (pOpt.getNodeType() == Node.ELEMENT_NODE)
                     {

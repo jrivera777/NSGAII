@@ -18,12 +18,12 @@ public class IndividualProject extends Individual
 
     private double[] fitnessValues;
     private AssemblySet assemSet; //Set of components and their available options
-    private HashMap<String, Assembly> currentAssemblies; //Component ==> Currently selected Assembly
+    private Map<String, Assembly> currentAssemblies; //Component ==> Currently selected Assembly
     private Map<String, List<POption>> parametrics;
     private ComponentGraph currentOrder; //Graph of current Assemblies to calculate IndividualProject duration
     private ArrayList<Precedence> precedence;
 
-    public HashMap<String, Assembly> getCurrentAssemblies()
+    public Map<String, Assembly> getCurrentAssemblies()
     {
         return currentAssemblies;
     }
@@ -53,21 +53,29 @@ public class IndividualProject extends Individual
 
     }
 
-    public IndividualProject(NSGA2 nsga, AssemblySet aSet, HashMap<String, Assembly> currAssemblies)
+    public IndividualProject(NSGA2 nsga, AssemblySet aSet, Map<String, Assembly> currAssemblies)
     {
         super(nsga);
         assemSet = aSet;
         currentAssemblies = currAssemblies;
-
+        currentOrder = generateComponentGraph(currAssemblies, precedence);
         fitnessValues = new double[nsga2.getNSGA2Configuration().getNumberOfObjectives()];
         for (int i = 0; i < fitnessValues.length; i++)
         {
             fitnessValues[i] = nsga2.getNSGA2Configuration().getFitnessFunction(i).evaluate(this);
         }
-
+    }
+    
+    public Map<String, List<POption>> getParametrics()
+    {
+        return parametrics;
+    }
+    public void setParametrics(Map<String, List<POption>> paras)
+    {
+        parametrics = paras;
     }
 
-    private HashMap<String, Assembly> generateRandomProject()
+    private Map<String, Assembly> generateRandomProject()
     {
         HashMap<String, Assembly> map = new HashMap<String, Assembly>();
         Random rand = new Random();
@@ -80,7 +88,7 @@ public class IndividualProject extends Individual
         return map;
     }
 
-    private ComponentGraph generateComponentGraph(HashMap<String, Assembly> assems, ArrayList<Precedence> precs)
+    private ComponentGraph generateComponentGraph(Map<String, Assembly> assems, ArrayList<Precedence> precs)
     {
         ComponentGraph g = new ComponentGraph();
 
@@ -240,53 +248,6 @@ public class IndividualProject extends Individual
     private static final int NUMBER_OF_GENERATIONS = 100;
     private static final double DIFFERENCE_THRESHOLD = .10;
 
-//    public static void main(String[] args)
-//    {
-//        FitnessFunction[] fitnessFunctions = new FitnessFunction[3];
-//        ProjectCostFitnessFunction fitnessFunction1 = new ProjectCostFitnessFunction();
-//        ProjectEnvironmentalImpactFitnessFunction fitnessFunction2 =
-//                new ProjectEnvironmentalImpactFitnessFunction();
-//        ProjectTimeFitnessFunction fitnessFunction3 = new ProjectTimeFitnessFunction();
-//        fitnessFunctions[0] = fitnessFunction1;
-//        fitnessFunctions[1] = fitnessFunction2;
-//        fitnessFunctions[2] = fitnessFunction3;
-//        NSGA2Configuration conf = new NSGA2Configuration(fitnessFunctions,
-//                MUTATION_PROBABILITY,
-//                CROSSOVER_PROBABILITY,
-//                DIFFERENCE_THRESHOLD,
-//                POPULATION_SIZE,
-//                NUMBER_OF_GENERATIONS);
-//        IndividualProject proj = null;
-//        ProjectTest.DebugMode mode = ProjectTest.DebugMode.FULL;
-//        
-//        if (mode == ProjectTest.DebugMode.SIMPLE)
-//        {
-//            ArrayList<Precedence> order = ComponentOrderReader.ReadXml("C:\\Documents and Settings\\fdot\\Desktop\\testingorder.xml");
-//            NSGA2 nsga2 = new NSGA2(conf);
-//             proj = new IndividualProject(nsga2, new AssemblySet("C:\\Documents and Settings\\fdot\\Desktop\\testing.xml"), order);
-//        }
-//        else
-//        {
-//            ArrayList<Precedence> order = ComponentOrderReader.ReadXml("TestOrder.xml");
-//            NSGA2 nsga2 = new NSGA2(conf);
-//             proj = new IndividualProject(nsga2, new AssemblySet("newComponents.xml"), order);
-//        }
-//        proj.printIndividual();
-//        System.out.println();
-//
-////        IndividualProject proj2 = new IndividualProject(nsga2, new AssemblySet("components.xml"), order);
-////        proj2.printIndividual();
-////        
-////        proj.crossover(proj2);
-////        System.out.println("\n=====AFTER CROSSOVER=====\n");
-////        proj.printIndividual();
-////        System.out.println();
-////        proj2.printIndividual();
-////        
-////        proj.mutate();
-////        System.out.println("\n=====AFTER MUTATION=====\n");
-////        proj.printIndividual();
-//    }
     public static HashMap<String, Assembly> testAssemblies()
     {
         HashMap<String, Assembly> map = new HashMap<String, Assembly>();

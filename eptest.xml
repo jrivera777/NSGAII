@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentData>
+    <Component>
+        <Name>Exterior Wall</Name>
+        <Description />
+        <Category>Exterior Wall</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Steel-Framed_R-13_Ext-wall</Name>
+            <Code />
+            <TotalAssemblyCost>13</TotalAssemblyCost>
+            <TotalAssemblyCO2>13</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Steel-Framed_R-14_Ext-wall</Name>
+            <Code />
+            <TotalAssemblyCost>14</TotalAssemblyCost>
+            <TotalAssemblyCO2>14</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Steel-Framed_R-15_Ext-wall</Name>
+            <Code />
+            <TotalAssemblyCost>15</TotalAssemblyCost>
+            <TotalAssemblyCO2>15</TotalAssemblyCO2>
+            <EstimatedDuration>2</EstimatedDuration>
+        </Alternative>
+    </Component>
+    <Component>
+        <Name>Roofing</Name>
+        <Description />
+        <Category>Roofing</Category>
+        <TotalComponentArea>1</TotalComponentArea>
+        <TotalComponentVolume>1</TotalComponentVolume>
+        <Alternative>
+            <Name>Metal Building_R-19_Roof</Name>
+            <Code />
+            <TotalAssemblyCost>19</TotalAssemblyCost>
+            <TotalAssemblyCO2>19</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+		<Alternative>
+            <Name>Metal Building_R-20_Roof</Name>
+            <Code />
+            <TotalAssemblyCost>20</TotalAssemblyCost>
+            <TotalAssemblyCO2>20</TotalAssemblyCO2>
+            <EstimatedDuration>1</EstimatedDuration>
+        </Alternative>
+    </Component>
+</ComponentData>
