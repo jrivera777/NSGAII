@@ -49,8 +49,8 @@ public class ProjectTest
         String compFile, orderFile = "";
 
         //===============DEBUGGING MODES===========//
-        DebugMode dbgMode = DebugMode.FULL;
-        DisplayMode disMode = DisplayMode.DISPLAY;
+        DebugMode dbgMode = DebugMode.SIMPLE;
+        DisplayMode disMode = DisplayMode.NO_DISPLAY;
         //=========================================//
 
         switch (dbgMode)

@@ -2,9 +2,7 @@ package IDF;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -22,13 +20,13 @@ public class IDFTranscriber
 {
 
     private String zoneFile;
-    private Map<String, List<Surface>> zonesToSurfaces;
+    //private Map<String, List<Surface>> zonesToSurfaces;
     private List<Zone> zones;
 
     public IDFTranscriber(String fName)
     {
         zoneFile = fName;
-        zonesToSurfaces = new HashMap<String, List<Surface>>();
+        //zonesToSurfaces = new HashMap<String, List<Surface>>();
         zones = new ArrayList<Zone>();
         loadZones();
     }
@@ -71,7 +69,10 @@ public class IDFTranscriber
                                     {
                                         Element surf = (Element) surface;
                                         String surfaceName = surf.getAttribute("id");
+                                        String surfaceType = surf.getAttribute("type");
+
                                         Surface nSurf = new Surface(surfaceName);
+                                        nSurf.setType(surfaceType);
 
                                         //get construction objects in surface
                                         NodeList constructs = surf.getElementsByTagName("Construction");
@@ -80,7 +81,7 @@ public class IDFTranscriber
                                             for (int k = 0; k < constructs.getLength(); k++)
                                             {
                                                 Node construction = constructs.item(k);
-                                                String constrName = construction.getChildNodes().item(0).getNodeValue().trim().trim();
+                                                String constrName = construction.getChildNodes().item(0).getNodeValue().trim();
                                                 nSurf.setconstruction(constrName);
 
                                                 if (zones.contains(nZone))
@@ -92,20 +93,6 @@ public class IDFTranscriber
                                                     nZone.getSurfaces().add(nSurf);
                                                     zones.add(nZone);
                                                 }
-
-                                                if (zonesToSurfaces.containsKey(zoneName))
-                                                {
-                                                    List<Surface> s = zonesToSurfaces.get(zoneName);
-                                                    s.add(nSurf);
-                                                    zonesToSurfaces.put(zoneName, s);
-                                                }
-                                                else
-                                                {
-                                                    List<Surface> s = new ArrayList<Surface>();
-                                                    s.add(nSurf);
-                                                    zonesToSurfaces.put(zoneName, s);
-                                                }
-
                                             }
                                         }
                                     }
@@ -144,7 +131,8 @@ public class IDFTranscriber
         try
         {
             reader = new BufferedReader(new FileReader(baseFile));
-            writer = new BufferedWriter(new FileWriter(baseFile.substring(0, baseFile.length() - 4) + "_updated.idf"));
+            String updatedFile = baseFile.substring(0, baseFile.length() - 4) + "_updated.idf";
+            writer = new BufferedWriter(new FileWriter(updatedFile));
 
             String line = "";
             while ((line = reader.readLine()) != null)
@@ -161,8 +149,7 @@ public class IDFTranscriber
 
                     String surfaceName = line;
 
-                    //Name excludes the comment AND the comma (thus the -2).
-                    //surfaceName = surfaceName.substring(0, surfaceName.indexOf("!-") - 2).trim();
+                    //Name excludes the comment AND the comma .
                     surfaceName = surfaceName.substring(0, surfaceName.lastIndexOf(",")).trim();
                     Zone newZone = getZone(surfaceName);
 
@@ -182,8 +169,6 @@ public class IDFTranscriber
                         writer.newLine();
                     }
                     line = reader.readLine(); //get old zone
-                    //String newZone = getZone(surfaceName);
-
 
                     if (newZone != null) //found zone; update line
                     {
@@ -203,6 +188,19 @@ public class IDFTranscriber
                     writer.newLine();
                 }
             }
+
+            reader.close();
+            writer.close();
+            File old = new File(baseFile);
+            File file = new File(updatedFile);
+
+            //overwrite old file.  This way we only have one file which is used
+            //in different energy simulations.
+            if (file.exists() && old.exists())
+            {
+                old.delete();
+                file.renameTo(old);
+            }
         }
         catch (FileNotFoundException ex)
         {
@@ -219,19 +217,6 @@ public class IDFTranscriber
         return isReplaced;
     }
 
-//    private String getZone(String surface)
-//    {
-//        String zone = "";
-//        for (Map.Entry<String, List<Surface>> entry : zonesToSurfaces.entrySet())
-//        {
-//            if (entry.getValue().contains(surface))
-//            {
-//                zone = entry.getKey();
-//                break;
-//            }
-//        }
-//        return zone;
-//    }
     private Zone getZone(String surfName)
     {
         Surface surf = new Surface(surfName);

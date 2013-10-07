@@ -14,10 +14,11 @@ import java.util.Map;
  */
 public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunction
 {
-     @Override
+
+    @Override
     public double evaluate(Individual indv)
     {
-        if(indv == null)
+        if (indv == null)
         {
             throw new IllegalArgumentException("Individual must not be null.");
         }
@@ -27,14 +28,20 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
         }
 
         IndividualProject projIndv = (IndividualProject) indv;
-                
+
         double EI = 0.0;
-        
-        for(Map.Entry<String, Assembly> entry : projIndv.getCurrentAssemblies().entrySet())
+        StringBuilder geneSequence = new StringBuilder();
+        for (Map.Entry<String, Assembly> entry : projIndv.getCurrentAssemblies().entrySet())
         {
             EI += entry.getValue().getCo2();
+            
+            String assemName = entry.getValue().getName();
+            
         }
-        
+
+        //build sequence string to find correct simulation result
+
+        //add simulation result into total C02 emissions
         return EI;
     }
 }

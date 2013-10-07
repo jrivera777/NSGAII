@@ -1,8 +1,10 @@
 package ProjectOptimization;
 
-import NSGAII.*;
-import java.io.File;
-import java.io.FileNotFoundException;
+import IDF.POption;
+import IDF.ParametricOptionReader;
+import NSGAII.FitnessFunction;
+import NSGAII.Individual;
+import NSGAII.NSGA2;
 import java.util.*;
 
 /**
@@ -15,14 +17,10 @@ public class IndividualProject extends Individual
 {
 
     private double[] fitnessValues;
-    //Set of components and their available options
-    private AssemblySet assemSet;
-    //Component ==> Currently selected Assembly
-    private HashMap<String, Assembly> currentAssemblies;
-    //Current schedule for project.  Used to calculate duration of project.
-    //private ProjectSchedule currentSchedule;
-//    //Graph of current Assemblies to calculate IndividualProject duration
-    private ComponentGraph currentOrder;
+    private AssemblySet assemSet; //Set of components and their available options
+    private HashMap<String, Assembly> currentAssemblies; //Component ==> Currently selected Assembly
+    private Map<String, List<POption>> parametrics;
+    private ComponentGraph currentOrder; //Graph of current Assemblies to calculate IndividualProject duration
     private ArrayList<Precedence> precedence;
 
     public HashMap<String, Assembly> getCurrentAssemblies()
@@ -47,7 +45,6 @@ public class IndividualProject extends Individual
         precedence = order;
         currentAssemblies = generateRandomProject();
         currentOrder = generateComponentGraph(currentAssemblies, precedence);
-
         fitnessValues = new double[nsga2.getNSGA2Configuration().getNumberOfObjectives()];
         for (int i = 0; i < fitnessValues.length; i++)
         {
@@ -127,9 +124,9 @@ public class IndividualProject extends Individual
 
     @Override
     /**
-     * 
-     * <p>Mutation function randomly changes single genes in the chromosome. 
-     * Each gene is an option for a given activity. The probably of a new option 
+     *
+     * <p>Mutation function randomly changes single genes in the chromosome.
+     * Each gene is an option for a given activity. The probably of a new option
      * being selected for any gene is given by the defined MutationProbablity in
      * the NSGAConfiguration object.</p>
      */
@@ -152,10 +149,9 @@ public class IndividualProject extends Individual
                     replacement = options.get(rand.nextInt(options.size()));
                 entry.setValue(replacement);
 
-                //TODO: UPDATE IDF FILE CONSTRUCTION CHOICE FOR ALL APPROPRIATE SURFACES.
-                //      REQUIRES PROPER CATEGORY TO SEARCH IN IDF (SURFACE TYPE MATCHING).
-                
-                
+                System.out.printf("Name: %s - Category: %s\n", replacement.getName(), replacement.getCategory());
+
+
                 mutated = true;
             }
         }
@@ -291,7 +287,6 @@ public class IndividualProject extends Individual
 ////        System.out.println("\n=====AFTER MUTATION=====\n");
 ////        proj.printIndividual();
 //    }
-
     public static HashMap<String, Assembly> testAssemblies()
     {
         HashMap<String, Assembly> map = new HashMap<String, Assembly>();
