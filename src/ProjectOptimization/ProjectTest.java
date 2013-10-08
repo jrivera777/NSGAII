@@ -35,7 +35,7 @@ public class ProjectTest
     };
     private static double MUTATION_PROBABILITY = 0.05;  // A much higher mutation rate seems to have a negative effect!
     private static final double CROSSOVER_PROBABILITY = 0.8;
-    private static int POPULATION_SIZE = 200;
+    private static int POPULATION_SIZE = 500;
     private static int NUMBER_OF_GENERATIONS = 100;
     private static final double DIFFERENCE_THRESHOLD = .05;
 
@@ -52,7 +52,7 @@ public class ProjectTest
         compFile = orderFile = poFile = "";
 
         //===============DEBUGGING MODES===========//
-        DebugMode dbgMode = DebugMode.SIMPLE;
+        DebugMode dbgMode = DebugMode.FULL;
         DisplayMode disMode = DisplayMode.DISPLAY;
         //=========================================//
 
