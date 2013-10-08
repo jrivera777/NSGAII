@@ -40,17 +40,17 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
             
             String assemName = entry.getValue().getName();
             
-            List<POption> opts = projIndv.getParametrics().get(entry.getKey());
-            for(POption opt : opts)
-            {
-                if(opt.getName().equalsIgnoreCase(assemName))
-                    geneSequence.append(opt.getValue());
-                
-                if(count++ != projIndv.getCurrentAssemblies().size() - 1)
-                    geneSequence.append("-");
-            }
+//            List<POption> opts = projIndv.getParametrics().get(entry.getKey());
+//            for(POption opt : opts)
+//            {
+//                if(opt.getName().equalsIgnoreCase(assemName))
+//                    geneSequence.append(opt.getValue());
+//                
+//                if(count++ != projIndv.getCurrentAssemblies().size() - 1)
+//                    geneSequence.append("-");
+//            }
         }
-        System.out.printf("GeneSequence is : %s\n", geneSequence.toString());
+//        System.out.printf("GeneSequence is : %s\n", geneSequence.toString());
         
         //update EI and Cost based on simulation results
         return EI;

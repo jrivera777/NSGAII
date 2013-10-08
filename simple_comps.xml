@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentData>
+	<Component>
+		<Name>Exterior Walls</Name>
+		<Description>Exterior Walls</Description><Category>Exterior Wall</Category>
+		<TotalComponentArea>2322.78229386617</TotalComponentArea>
+		<TotalComponentVolume>1525.69158864583</TotalComponentVolume>
+		<Alternative>
+			<Name>Exterior Wall 6</Name>
+			<Code>B2010</Code>
+			<TotalAssemblyCost>26984.9232989902</TotalAssemblyCost>
+			<TotalAssemblyCO2>15094.1100615182</TotalAssemblyCO2>
+			<EstimatedDuration>9</EstimatedDuration>
+		</Alternative>
+		<Alternative>
+			<Name>Exterior Wall 12</Name>
+			<Code>B2010</Code>
+			<TotalAssemblyCost>28513.6581642495</TotalAssemblyCost>
+			<TotalAssemblyCO2>2406.34920821115</TotalAssemblyCO2>
+			<EstimatedDuration>8</EstimatedDuration>
+		</Alternative>
+	</Component>
+	<Component>
+		<Name>Roofing</Name>
+		<Description>Roofing</Description>
+		<Category>Roofing</Category>
+		<TotalComponentArea>3626.01695796325</TotalComponentArea>
+		<TotalComponentVolume>3626.01695796325</TotalComponentVolume>
+		<Alternative>
+			<Name>Roofing 1</Name>
+			<Code>B1020</Code>
+			<TotalAssemblyCost>27459.3405363833</TotalAssemblyCost>
+			<TotalAssemblyCO2>55413.6570110362</TotalAssemblyCO2>
+			<EstimatedDuration>27</EstimatedDuration>
+		</Alternative>
+		<Alternative>
+			<Name>Roofing 2</Name>
+			<Code>B1020</Code>
+			<TotalAssemblyCost>31277.1737914228</TotalAssemblyCost>
+			<TotalAssemblyCO2>26655.911440197</TotalAssemblyCO2>
+			<EstimatedDuration>27</EstimatedDuration>
+		</Alternative>
+	</Component>
+</ComponentData>

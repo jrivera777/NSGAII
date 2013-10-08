@@ -36,7 +36,7 @@ public class ProjectTest
     private static double MUTATION_PROBABILITY = 0.05;  // A much higher mutation rate seems to have a negative effect!
     private static final double CROSSOVER_PROBABILITY = 0.8;
     private static int POPULATION_SIZE = 200;
-    private static int NUMBER_OF_GENERATIONS = 500;
+    private static int NUMBER_OF_GENERATIONS = 100;
     private static final double DIFFERENCE_THRESHOLD = .05;
 
     /**
@@ -53,15 +53,15 @@ public class ProjectTest
 
         //===============DEBUGGING MODES===========//
         DebugMode dbgMode = DebugMode.SIMPLE;
-        DisplayMode disMode = DisplayMode.NO_DISPLAY;
+        DisplayMode disMode = DisplayMode.DISPLAY;
         //=========================================//
 
         switch (dbgMode)
         {
             case SIMPLE:
             {
-                compFile = "testing.xml";
-                orderFile = "testingorder.xml";
+                compFile = "simple_comps.xml";
+                orderFile = "simple_order.xml";
                 break;
             }
             case FULL:
@@ -128,11 +128,11 @@ public class ProjectTest
         LinkedList<Individual> startPopulation = new LinkedList<Individual>();
         //create the set of all options for each assembly
         ArrayList<Precedence> order = ComponentOrderReader.ReadXml(orderFile);
-        Map<String, List<POption>> parametrics = ParametricOptionReader.readParametricOptions(poFile);
+//        Map<String, List<POption>> parametrics = ParametricOptionReader.readParametricOptions(poFile);
         for (int i = 0; i < POPULATION_SIZE; i++)
         {
             IndividualProject indv = new IndividualProject(nsga2, assemSet, order);
-            indv.setParametrics(parametrics);
+//            indv.setParametrics(parametrics);
             startPopulation.add(indv);
         }
 
@@ -149,10 +149,9 @@ public class ProjectTest
         System.out.println("\n========= BEST PROJECTS=========");
         printBestProjects(bestProjects);
 
-        //LinkedList<IndividualProject> uniques = getUniqueProjects(bestProjects);
-
+        LinkedList<IndividualProject> uniques = getUniqueProjects(bestProjects);
         System.out.println("\nUNIQUE PROJECTS:");
-        //printBestProjects(uniques);
+        printBestProjects(uniques);
 
         switch (disMode)
         {

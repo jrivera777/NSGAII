@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentOrder>
+	<Component>
+		<Category>Exterior Wall</Category>
+		<Name>Exterior Walls</Name>
+		<PredecessorName>START</PredecessorName>
+		<SuccessorName>Roofing</SuccessorName>
+	</Component>
+	<Component>
+		<Category>Roofing</Category>
+		<Name>Roofing</Name>
+		<PredecessorName>Exterior Walls</PredecessorName>
+		<SuccessorName>END</SuccessorName>
+	</Component>
+</ComponentOrder>

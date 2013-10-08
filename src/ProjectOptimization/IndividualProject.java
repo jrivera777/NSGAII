@@ -65,11 +65,12 @@ public class IndividualProject extends Individual
             fitnessValues[i] = nsga2.getNSGA2Configuration().getFitnessFunction(i).evaluate(this);
         }
     }
-    
+
     public Map<String, List<POption>> getParametrics()
     {
         return parametrics;
     }
+
     public void setParametrics(Map<String, List<POption>> paras)
     {
         parametrics = paras;
@@ -91,21 +92,26 @@ public class IndividualProject extends Individual
     private ComponentGraph generateComponentGraph(Map<String, Assembly> assems, ArrayList<Precedence> precs)
     {
         ComponentGraph g = new ComponentGraph();
-
-        Assembly prev = null;
         for (Precedence p : precs)
         {
             if (p.getPredecessor().trim().equalsIgnoreCase(Assembly.START.getName()))
             {
                 //edge between start and first component does not affect time
-                prev = assems.get(p.getAssemName());
+                Assembly prev = assems.get(p.getAssemName());
+                Assembly to = assems.get(p.getSuccessor());
+
                 g.addEdge(Assembly.START, prev, 0);
+                if (!g.containsEdge(prev, to))
+                    g.addEdge(prev, to, prev.getDuration());
             }
             else if (p.getSuccessor().trim().equalsIgnoreCase(Assembly.END.getName()))
             {
                 Assembly curr = assems.get(p.getAssemName());
+                Assembly from = assems.get(p.getPredecessor());
                 //g.addEdge(prev, curr, prev.getDuration());
                 g.addEdge(curr, Assembly.END, curr.getDuration());
+                if(!g.containsEdge(from, curr))
+                    g.addEdge(from, curr, from.getDuration());
             }
             else
             {
