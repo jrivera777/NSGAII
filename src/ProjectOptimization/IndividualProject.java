@@ -1,10 +1,10 @@
 package ProjectOptimization;
 
 import IDF.POption;
-import IDF.ParametricOptionReader;
 import NSGAII.FitnessFunction;
 import NSGAII.Individual;
 import NSGAII.NSGA2;
+import java.io.File;
 import java.util.*;
 
 /**
@@ -22,6 +22,7 @@ public class IndividualProject extends Individual
     private Map<String, List<POption>> parametrics;
     private ComponentGraph currentOrder; //Graph of current Assemblies to calculate IndividualProject duration
     private ArrayList<Precedence> precedence;
+    private File energyDirectory;
 
     public Map<String, Assembly> getCurrentAssemblies()
     {
@@ -53,6 +54,23 @@ public class IndividualProject extends Individual
 
     }
 
+    public IndividualProject(NSGA2 nsga, AssemblySet aSet, ArrayList<Precedence> order, Map<String, List<POption>> paras, File eDir)
+    {
+        super(nsga);
+        assemSet = aSet;
+        precedence = order;
+        currentAssemblies = generateRandomProject();
+        currentOrder = generateComponentGraph(currentAssemblies, precedence);
+        parametrics = paras;
+        energyDirectory = eDir;
+        fitnessValues = new double[nsga2.getNSGA2Configuration().getNumberOfObjectives()];
+        for (int i = 0; i < fitnessValues.length; i++)
+        {
+            fitnessValues[i] = nsga2.getNSGA2Configuration().getFitnessFunction(i).evaluate(this);
+        }
+
+    }
+
     public IndividualProject(NSGA2 nsga, AssemblySet aSet, Map<String, Assembly> currAssemblies)
     {
         super(nsga);
@@ -74,6 +92,16 @@ public class IndividualProject extends Individual
     public void setParametrics(Map<String, List<POption>> paras)
     {
         parametrics = paras;
+    }
+
+    public File getEnergyDirectory()
+    {
+        return energyDirectory;
+    }
+
+    public void setEnergyDirectory(File ed)
+    {
+        energyDirectory = ed;
     }
 
     private Map<String, Assembly> generateRandomProject()
@@ -110,7 +138,7 @@ public class IndividualProject extends Individual
                 Assembly from = assems.get(p.getPredecessor());
                 //g.addEdge(prev, curr, prev.getDuration());
                 g.addEdge(curr, Assembly.END, curr.getDuration());
-                if(!g.containsEdge(from, curr))
+                if (!g.containsEdge(from, curr))
                     g.addEdge(from, curr, from.getDuration());
             }
             else
@@ -163,8 +191,7 @@ public class IndividualProject extends Individual
                     replacement = options.get(rand.nextInt(options.size()));
                 entry.setValue(replacement);
 
-                System.out.printf("Name: %s - Category: %s\n", replacement.getName(), replacement.getCategory());
-
+                //System.out.printf("Name: %s - Category: %s\n", replacement.getName(), replacement.getCategory());
 
                 mutated = true;
             }

@@ -35,7 +35,7 @@ public class ProjectTest
     };
     private static double MUTATION_PROBABILITY = 0.05;  // A much higher mutation rate seems to have a negative effect!
     private static final double CROSSOVER_PROBABILITY = 0.8;
-    private static int POPULATION_SIZE = 500;
+    private static int POPULATION_SIZE = 200;
     private static int NUMBER_OF_GENERATIONS = 100;
     private static final double DIFFERENCE_THRESHOLD = .05;
 
@@ -50,10 +50,10 @@ public class ProjectTest
         // create NSGA-II instance
         String compFile, orderFile, poFile;
         compFile = orderFile = poFile = "";
-
+        File eDir = null;
         //===============DEBUGGING MODES===========//
-        DebugMode dbgMode = DebugMode.FULL;
-        DisplayMode disMode = DisplayMode.DISPLAY;
+        DebugMode dbgMode = DebugMode.SIMPLE;
+        DisplayMode disMode = DisplayMode.NO_DISPLAY;
         //=========================================//
 
         switch (dbgMode)
@@ -62,6 +62,8 @@ public class ProjectTest
             {
                 compFile = "simple_comps.xml";
                 orderFile = "simple_order.xml";
+                poFile = "simple_parametric_options.xml";
+                eDir = new File("EnergyResults");
                 break;
             }
             case FULL:
@@ -79,26 +81,26 @@ public class ProjectTest
                 }
                 compFile = args[0];
                 orderFile = args[1];
-                if(args.length < 4)
+                if (args.length < 4)
                     System.out.println("Using default population = 200, # of generations = 500");
                 else
                 {
                     POPULATION_SIZE = Integer.parseInt(args[2]);
                     NUMBER_OF_GENERATIONS = Integer.parseInt(args[3]);
-                    
-                    if(POPULATION_SIZE % 4 != 0)
+
+                    if (POPULATION_SIZE % 4 != 0)
                     {
                         System.out.println("Population size must be divisible by 4.");
                         System.exit(-1);
                     }
                 }
-                if(args.length < 5)
+                if (args.length < 6)
                     System.out.println("No ParametricOptions file found. Energy simulation data will not be considered!");
                 else
                 {
-                    
+                    poFile = args[4];
+                    eDir = new File(args[5]); //must be a directory.
                 }
-                
                 break;
             }
             default:
@@ -106,7 +108,7 @@ public class ProjectTest
         }
 
         AssemblySet assemSet = new AssemblySet(compFile);
-        MUTATION_PROBABILITY = 1 / assemSet.size();
+        //MUTATION_PROBABILITY = 1.0 / assemSet.size();
         ProjectCostFitnessFunction fitnessFunction1 = new ProjectCostFitnessFunction();
         ProjectEnvironmentalImpactFitnessFunction fitnessFunction2 =
                 new ProjectEnvironmentalImpactFitnessFunction();
@@ -128,11 +130,15 @@ public class ProjectTest
         LinkedList<Individual> startPopulation = new LinkedList<Individual>();
         //create the set of all options for each assembly
         ArrayList<Precedence> order = ComponentOrderReader.ReadXml(orderFile);
-//        Map<String, List<POption>> parametrics = ParametricOptionReader.readParametricOptions(poFile);
+        Map<String, List<POption>> parametrics = ParametricOptionReader.readParametricOptions(poFile);
         for (int i = 0; i < POPULATION_SIZE; i++)
         {
-            IndividualProject indv = new IndividualProject(nsga2, assemSet, order);
-//            indv.setParametrics(parametrics);
+            IndividualProject indv;
+            if (parametrics != null || eDir != null)
+                indv = new IndividualProject(nsga2, assemSet, order, parametrics, eDir);
+            else
+                indv = new IndividualProject(nsga2, assemSet, order);
+
             startPopulation.add(indv);
         }
 

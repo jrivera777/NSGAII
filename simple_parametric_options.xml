@@ -1,0 +1,10 @@
+<Parametrics>
+	<ParametricOption id="ExtWallOption" comp="Exterior Walls">
+		<Option value="1">Exterior Wall 6</Option>
+		<Option value="2">Exterior Wall 12</Option>
+	</ParametricOption>
+	<ParametricOption id="RoofOption" comp="Roofing">
+		<Option value="1">Roofing 1</Option>
+		<Option value="2">Roofing 2</Option>
+	</ParametricOption>
+</Parametrics>
