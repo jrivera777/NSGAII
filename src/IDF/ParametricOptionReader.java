@@ -19,6 +19,8 @@ public class ParametricOptionReader
 
     public static Map<String, List<POption>> readParametricOptions(String paraOptions)
     {
+        if(paraOptions == null || paraOptions.equals(""))
+            return null;
         Map<String, List<POption>> params = new TreeMap<String, List<POption>>();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try

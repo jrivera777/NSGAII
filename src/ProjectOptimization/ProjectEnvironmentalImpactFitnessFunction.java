@@ -7,7 +7,9 @@ package ProjectOptimization;
 import IDF.POption;
 import NSGAII.FitnessFunction;
 import NSGAII.Individual;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -61,9 +63,8 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
         String gs = geneSequence.toString();
         //update EI based on simulation results
         File eDir = projIndv.getEnergyDirectory();
-        if (!eDir.isDirectory())
-            System.out.printf("%s is not a directory! Excluding Energy Simulation data!!!\n", eDir.getName());
-        else
+        
+        if(eDir != null && eDir.isDirectory())
         {
             File[] files = eDir.listFiles();
             for (File f : files)
@@ -72,15 +73,18 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
                 {
                     try
                     {
-                        Scanner lineScan = new Scanner(f);
+                        BufferedReader reader = new BufferedReader(new FileReader(f));
+                        //Scanner lineScan = new Scanner(f);
                         //Assumptions: columns 2 and 17 contain the
                         //desired values: electricity:facility(RunPeriod)
                         //and Gas:Facility(RunPeriod).
                         //Both are in Joules.
                         //Only the last row (December) contains a useful value
                         for (int i = 0; i < 12; i++)
-                            lineScan.nextLine(); //disgard
-                        String[] data = lineScan.nextLine().split(",");
+                            reader.readLine();
+                          //  lineScan.nextLine(); //disgard
+                        //String[] data = lineScan.nextLine().split(",");
+                        String[] data = reader.readLine().split(",");
                         elecJ = Double.parseDouble(data[1]);
                         gasJ = Double.parseDouble(data[16]);
                     }
@@ -96,14 +100,14 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
             //http://www.epa.gov/cleanenergy/documents/egridzips/eGRID2012V1_0_year09_GHGOutputrates.pdf
             //We use the FRCC Annual total output emission rate
             //1 J = 2.77777778e-10 MWH
-            double conversion = Double.parseDouble("2.77777778e-10");
-            double elecMWH = conversion * elecJ;
-            double gasMWH = conversion * gasJ;
-
+            double mwhConversion = Double.parseDouble("2.77777778e-10");
+            double thermConversion = Double.parseDouble("9.48043428e-9");
+            double elecMWH = mwhConversion * elecJ;
+            double gasTherms = gasJ * thermConversion;
             double elecKgYear = (elecMWH * 1176.61) * 0.453592;//MHW * CO2lbsCnvt * kgCvnt
-            double gasKgYear = (gasMWH * 1176.61) * 0.453592;
+            double gasKgYear = (0.005306 * gasTherms) * 1000; //therms * MetricTonCnvt*kgCvnt
 
-            EI += elecKgYear;
+            EI += elecKgYear + gasKgYear;
         }
         return EI;
     }

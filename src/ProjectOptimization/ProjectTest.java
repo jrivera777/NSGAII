@@ -36,7 +36,7 @@ public class ProjectTest
     private static double MUTATION_PROBABILITY = 0.05;  // A much higher mutation rate seems to have a negative effect!
     private static final double CROSSOVER_PROBABILITY = 0.8;
     private static int POPULATION_SIZE = 200;
-    private static int NUMBER_OF_GENERATIONS = 100;
+    private static int NUMBER_OF_GENERATIONS = 500;
     private static final double DIFFERENCE_THRESHOLD = .05;
 
     /**
@@ -60,6 +60,7 @@ public class ProjectTest
         {
             case SIMPLE:
             {
+                //testing with UNT building and. Not meant to be accurate.
                 compFile = "simple_comps.xml";
                 orderFile = "simple_order.xml";
                 poFile = "simple_parametric_options.xml";
@@ -74,7 +75,7 @@ public class ProjectTest
             {
                 if (args.length < 2)
                 {
-                    System.out.println("Missing input. Try: <program> "
+                    System.err.println("Missing input. Try: <program> "
                             + "<componentsFile> <precedenceFile> <population size> "
                             + "<# of generations>\nOr <program> <componentsFile> <precedenceFile>");
                     System.exit(-1);
@@ -90,12 +91,12 @@ public class ProjectTest
 
                     if (POPULATION_SIZE % 4 != 0)
                     {
-                        System.out.println("Population size must be divisible by 4.");
+                        System.err.println("Population size must be divisible by 4.");
                         System.exit(-1);
                     }
                 }
                 if (args.length < 6)
-                    System.out.println("No ParametricOptions file found. Energy simulation data will not be considered!");
+                    System.err.println("No ParametricOptions file found. Energy simulation data will not be considered!");
                 else
                 {
                     poFile = args[4];
@@ -142,6 +143,14 @@ public class ProjectTest
             startPopulation.add(indv);
         }
 
+
+        System.out.println("Simulation Info");
+        System.out.println("===============");
+        System.out.printf("Population Siz :%d\n"
+                + "# of Generations: %d\n"
+                + "Mutation probability: %.2f\n"
+                + "Crossover probability: %.2f\n", POPULATION_SIZE, NUMBER_OF_GENERATIONS,
+                MUTATION_PROBABILITY, CROSSOVER_PROBABILITY);
         // start evolution
         LinkedList<Individual> bestIndividuals = nsga2.evolve(startPopulation);
 

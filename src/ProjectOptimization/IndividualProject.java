@@ -160,7 +160,8 @@ public class IndividualProject extends Individual
     @Override
     protected Individual createClonedIndividual()
     {
-        Individual clone = new IndividualProject(nsga2, this.assemSet, this.precedence);
+        Individual clone = new IndividualProject(nsga2, assemSet, precedence,
+                parametrics, energyDirectory);
         return clone;
     }
 
