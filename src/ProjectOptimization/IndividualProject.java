@@ -24,11 +24,6 @@ public class IndividualProject extends Individual
     private ArrayList<Precedence> precedence;
     private File energyDirectory;
 
-    public Map<String, Assembly> getCurrentAssemblies()
-    {
-        return currentAssemblies;
-    }
-
     public void setCurrentAssemblies(HashMap<String, Assembly> currentAssemblies)
     {
         this.currentAssemblies = currentAssemblies;
@@ -84,6 +79,11 @@ public class IndividualProject extends Individual
         }
     }
 
+    public Map<String, Assembly> getCurrentAssemblies()
+    {
+        return currentAssemblies;
+    }
+
     public Map<String, List<POption>> getParametrics()
     {
         return parametrics;
@@ -102,6 +102,31 @@ public class IndividualProject extends Individual
     public void setEnergyDirectory(File ed)
     {
         energyDirectory = ed;
+    }
+
+    public StringBuilder buildGeneSequence()
+    {
+        StringBuilder geneSequence = new StringBuilder();
+        int count = 0;
+        for (Map.Entry<String, Assembly> entry : currentAssemblies.entrySet())
+        {
+            if (parametrics != null)
+            {
+                String assemName = "";
+                List<POption> opts = parametrics.get(entry.getKey());
+                for (POption opt : opts)
+                {
+                    assemName = entry.getValue().getName();
+                    if (opt.getName().equalsIgnoreCase(assemName))
+                    {
+                        geneSequence.append(opt.getValue());
+                        if (count++ != currentAssemblies.size() - 1)
+                            geneSequence.append("-");
+                    }
+                }
+            }
+        }
+        return geneSequence;
     }
 
     private Map<String, Assembly> generateRandomProject()
@@ -209,9 +234,9 @@ public class IndividualProject extends Individual
 
     @Override
     /**
-     *<p>Crossover function does One-Point Crossover at randomly selected gene.
-     * Each gene is an option for a given activity. The probability of crossover 
-     * occurring is given by the defined CROSSOVER_PROBABILITY in the 
+     * <p>Crossover function does One-Point Crossover at randomly selected gene.
+     * Each gene is an option for a given activity. The probability of crossover
+     * occurring is given by the defined CROSSOVER_PROBABILITY in the
      * NSGAConfiguration object.</p>
      */
     protected void crossover(Individual otherIndividual)

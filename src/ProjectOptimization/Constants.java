@@ -18,7 +18,7 @@ public class Constants
     public static final double MWH_CONVERSION = Double.parseDouble("2.77777778e-10");
     public static final double THERM_CONVERSION = Double.parseDouble("9.48043428e-9");
     public static final double US_AVG_CO2_LBS_PER_MWH = 1216.18;
-    public static final double US_AVG_COST_PER_KWH = 12.51;
+    public static final double US_AVG_COST_DOLLARS_PER_KWH = .1251;
     public static final double KG_PER_LB = 0.453592;
     public static final double METRIC_TONS_CO2_PER_THERM = 0.005306;
 }

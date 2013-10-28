@@ -36,27 +36,11 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
         IndividualProject projIndv = (IndividualProject) indv;
 
         double EI = 0.0;
-        StringBuilder geneSequence = new StringBuilder();
-        int count = 0;
+        StringBuilder geneSequence = projIndv.buildGeneSequence();
+        
         for (Map.Entry<String, Assembly> entry : projIndv.getCurrentAssemblies().entrySet())
-        {
             EI += entry.getValue().getCo2();
-            if (projIndv.getParametrics() != null)
-            {
-                String assemName = "";
-                List<POption> opts = projIndv.getParametrics().get(entry.getKey());
-                for (POption opt : opts)
-                {
-                    assemName = entry.getValue().getName();
-                    if (opt.getName().equalsIgnoreCase(assemName))
-                    {
-                        geneSequence.append(opt.getValue());
-                        if (count++ != projIndv.getCurrentAssemblies().size() - 1)
-                            geneSequence.append("-");
-                    }
-                }
-            }
-        }
+
         double elecJ = 0;
         double gasJ = 0;
         geneSequence.append(".csv");
@@ -85,8 +69,8 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
                 return EI;
             }
 
-            double elecMWH = elecJ * Constants.MWH_CONVERSION; //electricity in MWH
-            double gasTherms = gasJ * Constants.THERM_CONVERSION; //gas in Therms
+            double elecMWH = elecJ * Constants.MWH_CONVERSION;
+            double gasTherms = gasJ * Constants.THERM_CONVERSION;
             double elecKgYear = (elecMWH * Constants.US_AVG_CO2_LBS_PER_MWH) * Constants.KG_PER_LB;//MHW * CO2lbsCnvt * kgCvnt = CO2 in kg
             double gasKgYear = (gasTherms * Constants.METRIC_TONS_CO2_PER_THERM) * 1000; //therms * MetricTonCnvt*kgCvnt = CO2 in kg
 
