@@ -5,6 +5,7 @@
 package ProjectOptimization;
 
 import IDF.POption;
+import IDF.ParametricOptionReader;
 import NSGAII.FitnessFunction;
 import NSGAII.Individual;
 import java.io.BufferedReader;
@@ -12,7 +13,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 /**
  *
@@ -61,51 +61,34 @@ public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunctio
         double gasJ = 0;
         geneSequence.append(".csv");
         String gs = geneSequence.toString();
+
         //update EI based on simulation results
-        File eDir = projIndv.getEnergyDirectory();
-        
-        if(eDir != null && eDir.isDirectory())
+        File energySim = ParametricOptionReader.getEnergySimulationResult(projIndv, gs);
+        if (energySim != null)
         {
-            File[] files = eDir.listFiles();
-            for (File f : files)
+            try
             {
-                if (gs.equalsIgnoreCase(f.getName()))
-                {
-                    try
-                    {
-                        BufferedReader reader = new BufferedReader(new FileReader(f));
-                        //Scanner lineScan = new Scanner(f);
-                        //Assumptions: columns 2 and 17 contain the
-                        //desired values: electricity:facility(RunPeriod)
-                        //and Gas:Facility(RunPeriod).
-                        //Both are in Joules.
-                        //Only the last row (December) contains a useful value
-                        for (int i = 0; i < 12; i++)
-                            reader.readLine();
-                          //  lineScan.nextLine(); //disgard
-                        //String[] data = lineScan.nextLine().split(",");
-                        String[] data = reader.readLine().split(",");
-                        elecJ = Double.parseDouble(data[1]);
-                        gasJ = Double.parseDouble(data[16]);
-                    }
-                    catch (Exception e)
-                    {
-                        return EI;
-                    }
-                    break;
-                }
+                BufferedReader reader = new BufferedReader(new FileReader(energySim));
+                //Assumptions: columns 2 and 17 contain the
+                //desired values: electricity:facility(RunPeriod)
+                //and Gas:Facility(RunPeriod).
+                //Both are in Joules.
+                //Only the last row (December) contains a useful value
+                for (int i = 0; i < 12; i++)
+                    reader.readLine();
+                String[] data = reader.readLine().split(",");
+                elecJ = Double.parseDouble(data[1]);
+                gasJ = Double.parseDouble(data[16]);
             }
-            //convert data to CO2 equivalent in lbs.
-            //conversion factor based off of:
-            //http://www.epa.gov/cleanenergy/documents/egridzips/eGRID2012V1_0_year09_GHGOutputrates.pdf
-            //We use the FRCC Annual total output emission rate
-            //1 J = 2.77777778e-10 MWH
-            double mwhConversion = Double.parseDouble("2.77777778e-10");
-            double thermConversion = Double.parseDouble("9.48043428e-9");
-            double elecMWH = mwhConversion * elecJ;
-            double gasTherms = gasJ * thermConversion;
-            double elecKgYear = (elecMWH * 1176.61) * 0.453592;//MHW * CO2lbsCnvt * kgCvnt
-            double gasKgYear = (0.005306 * gasTherms) * 1000; //therms * MetricTonCnvt*kgCvnt
+            catch (Exception e)
+            {
+                return EI;
+            }
+
+            double elecMWH = elecJ * Constants.MWH_CONVERSION; //electricity in MWH
+            double gasTherms = gasJ * Constants.THERM_CONVERSION; //gas in Therms
+            double elecKgYear = (elecMWH * Constants.US_AVG_CO2_LBS_PER_MWH) * Constants.KG_PER_LB;//MHW * CO2lbsCnvt * kgCvnt = CO2 in kg
+            double gasKgYear = (gasTherms * Constants.METRIC_TONS_CO2_PER_THERM) * 1000; //therms * MetricTonCnvt*kgCvnt = CO2 in kg
 
             EI += elecKgYear + gasKgYear;
         }

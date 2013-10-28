@@ -170,8 +170,8 @@ public class IndividualProject extends Individual
      *
      * <p>Mutation function randomly changes single genes in the chromosome.
      * Each gene is an option for a given activity. The probably of a new option
-     * being selected for any gene is given by the defined MutationProbablity in
-     * the NSGAConfiguration object.</p>
+     * being selected for any gene is given by the defined MUTATION_PROBABILITY
+     * in the NSGAConfiguration object.</p>
      */
     protected void mutate()
     {
@@ -208,10 +208,14 @@ public class IndividualProject extends Individual
     }
 
     @Override
+    /**
+     *<p>Crossover function does One-Point Crossover at randomly selected gene.
+     * Each gene is an option for a given activity. The probability of crossover 
+     * occurring is given by the defined CROSSOVER_PROBABILITY in the 
+     * NSGAConfiguration object.</p>
+     */
     protected void crossover(Individual otherIndividual)
     {
-
-
         if (otherIndividual == null)
         {
             throw new IllegalArgumentException("'otherIndividual' must not be null.");
@@ -275,34 +279,6 @@ public class IndividualProject extends Individual
 
         System.out.println();
         this.getCurrentOrder().printPath("END");
-    }
-    private static final double MUTATION_PROBABILITY = 0.05;  // A much higher mutation rate seems to have a negative effect!
-    private static final double CROSSOVER_PROBABILITY = 0.9;
-    private static final int POPULATION_SIZE = 40;
-    private static final int NUMBER_OF_GENERATIONS = 100;
-    private static final double DIFFERENCE_THRESHOLD = .10;
-
-    public static HashMap<String, Assembly> testAssemblies()
-    {
-        HashMap<String, Assembly> map = new HashMap<String, Assembly>();
-
-        map.put("Footing", new Assembly("Footing 2", "", 11010.45, 10764.6348, 2));
-        map.put("Stem Wall", new Assembly("Stem Wall Construction 3", "", 9713.78, 8616.6189, 1));
-        map.put("Subgrade Insulation", new Assembly("Subgrade Insulation 1", "", 337.49, 112.4346, 1));
-        map.put("Slab-on-Grade Construction", new Assembly("Slab-on-Grade Construction 2", "", 7758.80, 8696.2009, 1));
-        map.put("Exterior Wall Construction", new Assembly("Exterior Wall Construction 2", "", 400.88, 6.1134, 1));
-        map.put("Roof Truss Construction", new Assembly("Roof Truss Construction 1", "", 0, 0, 0));
-        map.put("Interior Wall Framing", new Assembly("Interior Wall Framing 1", "", 205.44, 6.0251, 1));
-        map.put("Interior Sheathing", new Assembly("Interior Sheathing 2", "", 1566.76, 863.0177, 2));
-        map.put("Exterior wall Insulation ", new Assembly("Exterior wall Insulation 1", "", 5913.56, 1949.8478, 13));
-        map.put("Exterior wall Sheathing", new Assembly("Exterior wall Sheathing 2", "", 3057.01, 1678.5044, 3));
-        map.put("Roof Insulation", new Assembly("Roof Insulation 1", "", 3797.78, 1255.1357, 9));
-        map.put("Roofing", new Assembly("Roofing 3", "", 6150.11, 8265.8170, 13));
-        map.put("Flooring", new Assembly("Flooring 2", "", 29783.12, 53.7175, 9));
-        map.put("Exterior Siding", new Assembly("Exterior Siding 2", "", 8953.44, 3056.9397, 4));
-
-
-        return map;
     }
 
     @Override

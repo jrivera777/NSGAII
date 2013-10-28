@@ -35,6 +35,9 @@ public class ProjectCostFitnessFunction implements FitnessFunction
             cost += entry.getValue().getCost();
         }
         
+        //Average US electricity Cost
+        //http://www.eia.gov/energyexplained/index.cfm?page=electricity_factors_affecting_prices
+        
         return cost;
     }
 }

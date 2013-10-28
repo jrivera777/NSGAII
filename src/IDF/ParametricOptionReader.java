@@ -1,5 +1,9 @@
 package IDF;
 
+import ProjectOptimization.IndividualProject;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +21,26 @@ import org.xml.sax.SAXException;
 public class ParametricOptionReader
 {
 
+    public static File getEnergySimulationResult(IndividualProject indv, String gs)
+    {
+        File eDir = indv.getEnergyDirectory();
+        if (eDir != null && eDir.isDirectory())
+        {
+            File[] files = eDir.listFiles();
+            for (File f : files)
+            {
+                if (gs.equalsIgnoreCase(f.getName()))
+                {
+                    return f;
+                }
+            }
+        }
+        return null;
+    }
+
     public static Map<String, List<POption>> readParametricOptions(String paraOptions)
     {
-        if(paraOptions == null || paraOptions.equals(""))
+        if (paraOptions == null || paraOptions.equals(""))
             return null;
         Map<String, List<POption>> params = new TreeMap<String, List<POption>>();
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
