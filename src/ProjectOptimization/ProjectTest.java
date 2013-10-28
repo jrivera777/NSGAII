@@ -51,6 +51,7 @@ public class ProjectTest
         String compFile, orderFile, poFile;
         compFile = orderFile = poFile = "";
         File eDir = null;
+        File resultsDir = null;
         //===============DEBUGGING MODES===========//
         DebugMode dbgMode = DebugMode.SIMPLE;
         DisplayMode disMode = DisplayMode.NO_DISPLAY;
@@ -65,6 +66,7 @@ public class ProjectTest
                 orderFile = "simple_order.xml";
                 poFile = "simple_parametric_options.xml";
                 eDir = new File("EnergyResults");
+                resultsDir = new File("C:\\Documents and Settings\\fdot\\Desktop\\Results");
                 break;
             }
             case FULL:
@@ -73,21 +75,22 @@ public class ProjectTest
                 break;
             case COMMAND:
             {
-                if (args.length < 2)
+                if (args.length < 3)
                 {
-                    System.err.println("Missing input. Try: <program> "
-                            + "<componentsFile> <precedenceFile> <population size> "
-                            + "<# of generations>\nOr <program> <componentsFile> <precedenceFile>");
+                    System.err.println("Missing input. Try: "
+                            + "<program> <components file> <precedence file> "
+                            + "<output directory>");
                     System.exit(-1);
                 }
                 compFile = args[0];
                 orderFile = args[1];
-                if (args.length < 4)
+                resultsDir = new File(args[2]);
+                if (args.length < 5)
                     System.out.println("Using default population = 200, # of generations = 500");
                 else
                 {
-                    POPULATION_SIZE = Integer.parseInt(args[2]);
-                    NUMBER_OF_GENERATIONS = Integer.parseInt(args[3]);
+                    POPULATION_SIZE = Integer.parseInt(args[3]);
+                    NUMBER_OF_GENERATIONS = Integer.parseInt(args[4]);
 
                     if (POPULATION_SIZE % 4 != 0)
                     {
@@ -95,12 +98,14 @@ public class ProjectTest
                         System.exit(-1);
                     }
                 }
-                if (args.length < 6)
-                    System.err.println("No ParametricOptions file found. Energy simulation data will not be considered!");
+                if (args.length < 7)
+                    System.err.println("No Parametric Options file and "
+                            + "Energy directory found. Energy simulation data "
+                            + "will not be considered!");
                 else
                 {
-                    poFile = args[4];
-                    eDir = new File(args[5]); //must be a directory.
+                    poFile = args[5];
+                    eDir = new File(args[6]); //must be a directory.
                 }
                 break;
             }
@@ -190,14 +195,14 @@ public class ProjectTest
         int count = 1;
         Calendar cal = Calendar.getInstance();
         DateFormat dateFormat = new SimpleDateFormat("MM_dd_yyyy");
-        String fileName = "C:\\Documents and Settings\\fdot\\Desktop\\Results\\results" + dateFormat.format(cal.getTime()) + "_Run_" + count++;
+        String fileName = resultsDir.getPath() + "\\results" + dateFormat.format(cal.getTime()) + "_Run_" + count++;
         String txtFile = fileName + ".txt";
         fileName = fileName + ".xml";
         File temp = new File(fileName);
         File txtTemp = new File(txtFile);
         while (temp.exists())
         {
-            fileName = "C:\\Documents and Settings\\fdot\\Desktop\\Results\\results" + dateFormat.format(cal.getTime()) + "_Run_" + count++;
+            fileName = resultsDir.getPath() + "\\results" + dateFormat.format(cal.getTime()) + "_Run_" + count++;
             txtFile = fileName + ".txt";
             fileName = fileName + ".xml";
             temp = new File(fileName);
