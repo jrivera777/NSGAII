@@ -19,6 +19,10 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * 
+ * @author Joseph Rivera
+ */
 public class GAResultWriter {
 
     public static void WriteOutResultsText(LinkedList<IndividualProject> results, String fileName)

@@ -5,7 +5,7 @@ import NSGAII.Individual;
 
 /**
  *
- * @author fdot
+ * @author Joseph Rivera
  */
 public class ProjectTimeFitnessFunction implements FitnessFunction
 {

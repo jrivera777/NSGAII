@@ -1,5 +1,10 @@
 package ProjectOptimization;
 
+/**
+ * 
+ * @author Joseph Rivera
+ *
+ */
 public class Constants
 {
     //Average US electricity Cost as of August 2013

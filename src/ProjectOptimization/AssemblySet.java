@@ -3,6 +3,10 @@ package ProjectOptimization;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * 
+ * @author Joseph Rivera
+ */
 public class AssemblySet 
 {
     private HashMap<String, ArrayList<Assembly>> optionSet;

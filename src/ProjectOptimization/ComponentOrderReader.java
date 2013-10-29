@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ProjectOptimization;
 
 import java.io.IOException;
@@ -18,7 +14,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author fdot
+ * @author Joseph Rivera
  */
 public class ComponentOrderReader
 {

@@ -2,7 +2,7 @@ package ProjectOptimization;
 
 /**
  *
- * @author fdot
+ * @author Joseph Rivera
  */
 public class Precedence 
 {

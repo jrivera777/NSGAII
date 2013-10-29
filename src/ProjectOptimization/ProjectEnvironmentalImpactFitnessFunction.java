@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ProjectOptimization;
 
 import IDF.POption;
@@ -16,7 +12,7 @@ import java.util.Map;
 
 /**
  *
- * @author fdot
+ * @author Joseph Rivera
  */
 public class ProjectEnvironmentalImpactFitnessFunction implements FitnessFunction
 {

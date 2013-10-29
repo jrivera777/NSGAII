@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ProjectOptimization;
 
 import NSGAII.Individual;
@@ -15,7 +11,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author fdot
+ * @author Joseph Rivera
  */
 public class ProjectNSGA2Listener implements NSGA2Listener
 {

@@ -1,6 +1,5 @@
 package NSGAII;
 
-
 /**
  *
  * @author Joseph Rivera

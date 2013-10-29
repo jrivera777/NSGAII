@@ -1,8 +1,5 @@
 package NSGAII;
 
-
-
-
 /* ===========================================================
  * JNSGA2: a free NSGA-II library for the Java(tm) platform
  * ===========================================================
@@ -23,7 +20,6 @@ package NSGAII;
  * if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA  02110-1301, USA.
  */
-
 
 
 /**

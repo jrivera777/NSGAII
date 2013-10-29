@@ -1,9 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ProjectOptimization;
-
+/**
+ * 
+ * @author Joseph Rivera
+ */
 public class Assembly
 {
 

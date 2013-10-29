@@ -8,7 +8,8 @@ import java.io.File;
 import java.util.*;
 
 /**
- *
+ * @author Joseph Rivera
+ * 
  * <p>Represents an individual Project. Each project has a list of assemblies.
  * The Cost and Environmental Impact (EI) of a project is determined by its
  * assemblies.</p>
@@ -104,6 +105,10 @@ public class IndividualProject extends Individual
         energyDirectory = ed;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public StringBuilder buildGeneSequence()
     {
         StringBuilder geneSequence = new StringBuilder();
