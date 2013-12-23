@@ -1,7 +1,7 @@
 package ProjectOptimization;
 
 import IDF.POption;
-import IDF.ParametricOptionReader;
+import IDF.EnergySimParametricOptionReader;
 import NSGAII.*;
 import java.io.File;
 import java.text.DateFormat;
@@ -32,7 +32,7 @@ public class ProjectTest
     private static double MUTATION_PROBABILITY = 0.05;  // A much higher mutation rate seems to have a negative effect!
     private static final double CROSSOVER_PROBABILITY = 0.8;
     private static int POPULATION_SIZE = 200;
-    private static int NUMBER_OF_GENERATIONS = 500;
+    private static int NUMBER_OF_GENERATIONS = 200;
     private static final double DIFFERENCE_THRESHOLD = .05;
 
     /**
@@ -46,10 +46,10 @@ public class ProjectTest
         // create NSGA-II instance
         String compFile, orderFile, poFile;
         compFile = orderFile = poFile = "";
-        File eDir = null;
+        File eResults = null;
         File resultsDir = null;
         //===============DEBUGGING MODES===========//
-        DebugMode dbgMode = DebugMode.SIMPLE;
+        DebugMode dbgMode = DebugMode.COMMAND;
         DisplayMode disMode = DisplayMode.NO_DISPLAY;
         //=========================================//
 
@@ -58,10 +58,10 @@ public class ProjectTest
             case SIMPLE:
             {
                 //testing with UNT building and. Not meant to be accurate.
-                compFile = "simple_comps.xml";
-                orderFile = "simple_order.xml";
-                poFile = "simple_parametric_options.xml";
-                eDir = new File("EnergyResults");
+                compFile = "C:\\Documents and Settings\\fdot\\Desktop\\Parametric\\simple_test_comps.xml";
+                orderFile = "C:\\Documents and Settings\\fdot\\Desktop\\Parametric\\simple_test_order.xml";
+                poFile = "C:\\Documents and Settings\\fdot\\Desktop\\Parametric\\simple_test_options.xml";
+                eResults = new File("C:\\Documents and Settings\\fdot\\Desktop\\Parametric\\Output\\output.txt");
                 resultsDir = new File("C:\\Documents and Settings\\fdot\\Desktop\\Results");
                 break;
             }
@@ -101,7 +101,7 @@ public class ProjectTest
                 else
                 {
                     poFile = args[5];
-                    eDir = new File(args[6]); //must be a directory.
+                    eResults = new File(args[6]);
                 }
                 break;
             }
@@ -110,15 +110,19 @@ public class ProjectTest
         }
 
         AssemblySet assemSet = new AssemblySet(compFile);
-        //MUTATION_PROBABILITY = 1.0 / assemSet.size();
-        ProjectCostFitnessFunction fitnessFunction1 = new ProjectCostFitnessFunction();
-        ProjectEnvironmentalImpactFitnessFunction fitnessFunction2 =
-                new ProjectEnvironmentalImpactFitnessFunction();
-        ProjectTimeFitnessFunction fitnessFunction3 = new ProjectTimeFitnessFunction();
+        FitnessFunction fitnessFunction1;
+        FitnessFunction fitnessFunction2;
+        FitnessFunction fitnessFunction3;
+
+        fitnessFunction1 = eResults == null ? new CostFitnessFunction() : new CostESFitnessFunction();
+        fitnessFunction2 = eResults == null ? new EnvironmentalImpactFitnessFunction() : new EnvironmentalImpactSMFitnessFunction();
+        fitnessFunction3 = new ProjectTimeFitnessFunction();
+
         FitnessFunction[] fitnessFunctions = new FitnessFunction[3];
         fitnessFunctions[0] = fitnessFunction1;
         fitnessFunctions[1] = fitnessFunction2;
         fitnessFunctions[2] = fitnessFunction3;
+
         NSGA2Configuration conf = new NSGA2Configuration(fitnessFunctions,
                 MUTATION_PROBABILITY,
                 CROSSOVER_PROBABILITY,
@@ -132,12 +136,12 @@ public class ProjectTest
         LinkedList<Individual> startPopulation = new LinkedList<Individual>();
         //create the set of all options for each assembly
         ArrayList<Precedence> order = ComponentOrderReader.ReadXml(orderFile);
-        Map<String, List<POption>> parametrics = ParametricOptionReader.readParametricOptions(poFile);
+        Map<String, List<POption>> parametrics = EnergySimParametricOptionReader.readParametricOptions(poFile);
         for (int i = 0; i < POPULATION_SIZE; i++)
         {
             IndividualProject indv;
-            if (parametrics != null || eDir != null)
-                indv = new IndividualProject(nsga2, assemSet, order, parametrics, eDir);
+            if (parametrics != null || eResults != null)
+                indv = new IndividualProject(nsga2, assemSet, order, parametrics, eResults);
             else
                 indv = new IndividualProject(nsga2, assemSet, order);
 

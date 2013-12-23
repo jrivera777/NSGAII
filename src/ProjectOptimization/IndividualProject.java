@@ -8,11 +8,12 @@ import java.io.File;
 import java.util.*;
 
 /**
+ *
+ * Represents an individual Project. Each project has a list of assemblies. The
+ * Cost and Environmental Impact (EI) of a project is determined by its
+ * assemblies.
+ *
  * @author Joseph Rivera
- * 
- * <p>Represents an individual Project. Each project has a list of assemblies.
- * The Cost and Environmental Impact (EI) of a project is determined by its
- * assemblies.</p>
  */
 public class IndividualProject extends Individual
 {
@@ -23,7 +24,7 @@ public class IndividualProject extends Individual
     private Map<String, List<POption>> parametrics;
     private ComponentGraph currentOrder; //Graph of current Assemblies to calculate IndividualProject duration
     private ArrayList<Precedence> precedence;
-    private File energyDirectory;
+    private File energyResults;
 
     public void setCurrentAssemblies(HashMap<String, Assembly> currentAssemblies)
     {
@@ -50,7 +51,7 @@ public class IndividualProject extends Individual
 
     }
 
-    public IndividualProject(NSGA2 nsga, AssemblySet aSet, ArrayList<Precedence> order, Map<String, List<POption>> paras, File eDir)
+    public IndividualProject(NSGA2 nsga, AssemblySet aSet, ArrayList<Precedence> order, Map<String, List<POption>> paras, File eRes)
     {
         super(nsga);
         assemSet = aSet;
@@ -58,7 +59,7 @@ public class IndividualProject extends Individual
         currentAssemblies = generateRandomProject();
         currentOrder = generateComponentGraph(currentAssemblies, precedence);
         parametrics = paras;
-        energyDirectory = eDir;
+        energyResults = eRes;
         fitnessValues = new double[nsga2.getNSGA2Configuration().getNumberOfObjectives()];
         for (int i = 0; i < fitnessValues.length; i++)
         {
@@ -95,19 +96,19 @@ public class IndividualProject extends Individual
         parametrics = paras;
     }
 
-    public File getEnergyDirectory()
+    public File getEnergyResults()
     {
-        return energyDirectory;
+        return energyResults;
     }
 
-    public void setEnergyDirectory(File ed)
+    public void setEnergyResults(File ed)
     {
-        energyDirectory = ed;
+        energyResults = ed;
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public StringBuilder buildGeneSequence()
     {
@@ -127,6 +128,7 @@ public class IndividualProject extends Individual
                         geneSequence.append(opt.getValue());
                         if (count++ != currentAssemblies.size() - 1)
                             geneSequence.append("-");
+                        break;
                     }
                 }
             }
@@ -191,7 +193,7 @@ public class IndividualProject extends Individual
     protected Individual createClonedIndividual()
     {
         Individual clone = new IndividualProject(nsga2, assemSet, precedence,
-                parametrics, energyDirectory);
+                parametrics, energyResults);
         return clone;
     }
 
